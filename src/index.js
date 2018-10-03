@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./ui/index.css";
-import App from "./ui/App";
+import App from "./chat/App";
 import * as serviceWorker from "./offline/serviceWorker";
 
 ReactDOM.render(<App />, document.getElementById("app"));
