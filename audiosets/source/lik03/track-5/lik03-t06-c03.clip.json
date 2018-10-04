@@ -1,0 +1,19 @@
+{
+  "title": "Narrative Song",
+  "album": "Lowland Tribes of Ecuador",
+  "artist": "Waorani people (Huarani)",
+  "year": 1986,
+  "country": "Ecuador",
+  "lnglat": [
+    -78.183406,
+    -1.831239
+  ],
+  "audio": {
+    "position": 3,
+    "beats": 16,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(158,50,99)"
+  }
+}

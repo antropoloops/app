@@ -1,0 +1,19 @@
+{
+  "title": "Baila Rosita",
+  "album": "A Orillas del Magdalena",
+  "artist": "Los Guacharacos",
+  "year": 2009,
+  "country": "Colombia",
+  "lnglat": [
+    -74.297333,
+    4.570868
+  ],
+  "audio": {
+    "position": 2,
+    "beats": 8,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(106,64,97)"
+  }
+}

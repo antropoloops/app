@@ -1,0 +1,19 @@
+{
+  "title": "Exu (part 2)",
+  "album": "Amazônia · Cult Music Of Northern Brazil",
+  "artist": "Closing song of a ritual cycle in the batuque houses",
+  "year": 1976,
+  "country": "Brasil",
+  "lnglat": [
+    -51.92528,
+    -14.235004
+  ],
+  "audio": {
+    "position": 1,
+    "beats": 8,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(106,89,98)"
+  }
+}

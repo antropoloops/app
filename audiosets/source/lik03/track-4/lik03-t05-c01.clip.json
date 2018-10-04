@@ -1,0 +1,19 @@
+{
+  "title": "Toque de capoeira de Sao Bento Grande",
+  "album": "Academia de capoeira de Angola. Sao Jorge dos irmaos unidos de mestre Caicara",
+  "artist": "Academia de capoeira de Angola",
+  "year": 1973,
+  "country": "Brasil",
+  "lnglat": [
+    -51.92528,
+    -14.235004
+  ],
+  "audio": {
+    "position": 1,
+    "beats": 8,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(190,50,95)"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Heitor Villa Lobos habla de la música Brasileña",
+  "album": "BENIN & BRESIL. CORREA DE AZEVEDO,L.H.",
+  "artist": "Heitor Villa Lobos",
+  "year": 1950,
+  "country": "Brasil",
+  "lnglat": [
+    -51.92528,
+    -14.235004
+  ],
+  "audio": {
+    "position": 1,
+    "beats": 18,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(222,63,94)"
+  }
+}

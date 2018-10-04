@@ -1,0 +1,17 @@
+{
+  "title": "Percussion sur Tabla et Ghara",
+  "album": "L'Algoza Du Sind",
+  "year": "1979",
+  "country": "Pakistan",
+  "lnglat": [
+    69.34511599999996,
+    30.375321
+  ],
+  "audio": {
+    "beats": 4,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(195,99,94)"
+  }
+}

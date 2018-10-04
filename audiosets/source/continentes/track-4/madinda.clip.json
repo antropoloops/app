@@ -1,0 +1,17 @@
+{
+  "title": "Solo De Madinda",
+  "album": "Ouganda: Aux Sources Du Nil",
+  "year": "1992",
+  "country": "Uganda",
+  "lnglat": [
+    32.290275000000065,
+    1.373333
+  ],
+  "audio": {
+    "beats": 8,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(152,92,90)"
+  }
+}

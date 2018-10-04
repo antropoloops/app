@@ -1,0 +1,19 @@
+{
+  "title": "Qanchi Alcalde",
+  "album": "Traditional Music of Peru, Vol. 1. Festivals of Cusco",
+  "artist": "Conjunto of Cusco",
+  "year": 1989,
+  "country": "Peru",
+  "lnglat": [
+    -75.015152,
+    -9.189967
+  ],
+  "audio": {
+    "position": 2,
+    "beats": 8,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(115,88,91)"
+  }
+}

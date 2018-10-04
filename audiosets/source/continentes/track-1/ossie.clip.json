@@ -1,0 +1,17 @@
+{
+  "title": "Ethiopian Serenade",
+  "album": "Count Ossie & The Mystic Revelation Of Rastafari",
+  "year": "2009",
+  "country": "Jamaica",
+  "lnglat": [
+    -77.297508,
+    18.109581
+  ],
+  "audio": {
+    "beats": 6,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(106,89,98)"
+  }
+}

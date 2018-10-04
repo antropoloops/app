@@ -1,0 +1,59 @@
+{
+  "id": "test",
+  "format": "audioset-2",
+  "meta": {
+    "title": "Test",
+    "description": "Set de prueba de Antropoloops"
+  },
+  "loader": {
+    "sources": {
+      "audio": [
+        "https://antropoloops.github.io/audiosets/test/{{filename}}.wav"
+      ]
+    }
+  },
+  "audio": {
+    "bpm": 110,
+    "defaults": {
+      "loop": true
+    }
+  },
+  "visuals": {
+    "geoMapUrl": "https://unpkg.com/world-atlas@1.1.4/world/110m.json",
+    "layout": []
+  },
+  "keyboard": {
+    "defaults": {
+      "type": "gate"
+    },
+    "keyMap": {
+      "q": {
+        "sample": "voice1"
+      },
+      "w": {
+        "sample": "rhythm1"
+      },
+      "e": {
+        "sample": "accomp1"
+      },
+      "r": {
+        "sample": "melody1"
+      },
+      "a": {
+        "sample": "voice2"
+      },
+      "s": {
+        "sample": "rhythm2"
+      },
+      "d": {
+        "sample": "accomp2"
+      },
+      "f": {
+        "sample": "melody2"
+      },
+      "z": {
+        "sample": "voice3"
+      }
+    }
+  }
+}

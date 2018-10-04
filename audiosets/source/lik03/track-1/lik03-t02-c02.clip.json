@@ -1,0 +1,19 @@
+{
+  "title": "Carvana indigena",
+  "album": "Sortilege de la flute equatorienne",
+  "artist": "Los Corazas, Carlos Bonilla, Gonzalo Castro",
+  "year": 1972,
+  "country": "Ecuador",
+  "lnglat": [
+    -78.183406,
+    -1.831239
+  ],
+  "audio": {
+    "position": 2,
+    "beats": 8,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(222,63,94)"
+  }
+}

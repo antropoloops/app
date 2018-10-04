@@ -1,0 +1,14 @@
+{
+  "title": "Acompañamiento 2",
+  "lnglat": [
+    -74.29733299999998,
+    4.570868
+  ],
+  "audio": {
+    "beats": 1,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(106,89,98)"
+  }
+}

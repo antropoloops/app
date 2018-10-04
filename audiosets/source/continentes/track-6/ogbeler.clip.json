@@ -1,0 +1,17 @@
+{
+  "title": "Ögbeler",
+  "album": "Tuvinian Singers & Musicians - Chöömej: Throat-Singing From The Center Of Asia",
+  "year": "1993",
+  "country": "Tuva",
+  "lnglat": [
+    95.62601719999998,
+    51.8872669
+  ],
+  "audio": {
+    "beats": 56,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(115,88,91)"
+  }
+}

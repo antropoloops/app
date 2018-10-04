@@ -1,0 +1,17 @@
+{
+  "title": "Cumbia en la India",
+  "album": "A Orillas del Magdalena",
+  "year": "2009",
+  "country": "Colombia",
+  "lnglat": [
+    -74.29733299999998,
+    4.570868
+  ],
+  "audio": {
+    "beats": 4,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(151,60,97)"
+  }
+}

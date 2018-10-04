@@ -1,0 +1,17 @@
+{
+  "title": "Ballade D'Amar Singh Avec Vièles Sarangi",
+  "album": "Inde. Rajasthan. Musiciens Professionnels Populaires",
+  "year": "1994",
+  "country": "Rajastan",
+  "lnglat": [
+    74.21793260000004,
+    27.0238036
+  ],
+  "audio": {
+    "beats": 8,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(300,61,99)"
+  }
+}

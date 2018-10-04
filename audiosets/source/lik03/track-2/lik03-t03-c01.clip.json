@@ -1,0 +1,19 @@
+{
+  "title": "Mistura No. 4",
+  "album": "Batucada Genial",
+  "artist": "Mester Geraldo e Sua Bateria",
+  "year": 1977,
+  "country": "Brasil",
+  "lnglat": [
+    -51.92528,
+    -14.235004
+  ],
+  "audio": {
+    "position": 1,
+    "beats": 4,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(53,65,98)"
+  }
+}

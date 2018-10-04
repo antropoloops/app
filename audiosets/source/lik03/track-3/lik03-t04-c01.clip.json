@@ -1,0 +1,19 @@
+{
+  "title": "Chico chora",
+  "album": "Partido alto nota 10",
+  "artist": "Bezerra & Genaro Da Silva",
+  "year": 1977,
+  "country": "Brasil",
+  "lnglat": [
+    -51.92528,
+    -14.235004
+  ],
+  "audio": {
+    "position": 1,
+    "beats": 4,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(300,61,99)"
+  }
+}

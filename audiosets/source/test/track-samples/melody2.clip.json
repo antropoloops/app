@@ -1,0 +1,14 @@
+{
+  "title": "Melodía 2",
+  "lnglat": [
+    30.802498000000014,
+    26.820553
+  ],
+  "audio": {
+    "beats": 1,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(106,89,98)"
+  }
+}
