@@ -1,6 +1,6 @@
 import nanobus from "nanobus";
 import connect from "./room";
-import Resources from "./Resources";
+import Resources from "./Bundle";
 import Player from "./Player";
 import { getResources, getPlayer } from "./cache";
 
