@@ -3,13 +3,20 @@ import { combineReducers, createStore, applyMiddleware, compose } from "redux";
 // middleware
 import thunk from "redux-thunk";
 import { loadState, saveState } from "./localStorage";
-//import audiosets from "./model/audiosets";
+import app from "../model/rooms";
+import audiosets from "../model/audiosets";
+import control from "../model/control";
+import player from "../model/player";
 
 export default function create() {
   const initialState = loadState();
+  console.log("INITIAL", initialState);
 
   const reducer = combineReducers({
-    /* audiosets */
+    app,
+    audiosets,
+    control,
+    player
   });
   const store = createStore(
     reducer,
@@ -21,9 +28,7 @@ export default function create() {
   );
   store.subscribe(
     throttle(() => {
-      // saveState({
-      //   todos: store.getState().todos
-      // });
+      saveState(store.getState());
     }, 1000)
   );
   return store;

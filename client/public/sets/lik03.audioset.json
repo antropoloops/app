@@ -53,7 +53,7 @@
   "clips": {
     "lik03-t01-c01": {
       "name": "lik03-t01-c01",
-      "track": "track-0",
+      "track": "guitarras",
       "title": "Carvana indigena",
       "album": "Sortilege de la flute equatorienne",
       "artist": "Los Corazas, Carlos Bonilla, Gonzalo Castro",
@@ -74,7 +74,7 @@
     },
     "lik03-t01-c02": {
       "name": "lik03-t01-c02",
-      "track": "track-0",
+      "track": "guitarras",
       "title": "Carvana indigena",
       "album": "Sortilege de la flute equatorienne",
       "artist": "Los Corazas, Carlos Bonilla, Gonzalo Castro",
@@ -95,7 +95,7 @@
     },
     "lik03-t01-c03": {
       "name": "lik03-t01-c03",
-      "track": "track-0",
+      "track": "guitarras",
       "title": "Carvana indigena",
       "album": "Sortilege de la flute equatorienne",
       "artist": "Los Corazas, Carlos Bonilla, Gonzalo Castro",
@@ -116,7 +116,7 @@
     },
     "lik03-t01-c04": {
       "name": "lik03-t01-c04",
-      "track": "track-0",
+      "track": "guitarras",
       "title": "Carvana indigena",
       "album": "Sortilege de la flute equatorienne",
       "artist": "Los Corazas, Carlos Bonilla, Gonzalo Castro",
@@ -133,6 +133,69 @@
       },
       "display": {
         "color": "hsv(337,99,90)"
+      }
+    },
+    "lik03-t03-c01": {
+      "name": "lik03-t03-c01",
+      "track": "percusion",
+      "title": "Mistura No. 4",
+      "album": "Batucada Genial",
+      "artist": "Mester Geraldo e Sua Bateria",
+      "year": 1977,
+      "country": "Brasil",
+      "lnglat": [
+        -51.92528,
+        -14.235004
+      ],
+      "audio": {
+        "position": 1,
+        "beats": 4,
+        "volume": 0.7
+      },
+      "display": {
+        "color": "hsv(53,65,98)"
+      }
+    },
+    "lik03-t03-c02": {
+      "name": "lik03-t03-c02",
+      "track": "percusion",
+      "title": "Baila Rosita",
+      "album": "A Orillas del Magdalena",
+      "artist": "Los Guacharacos",
+      "year": 2009,
+      "country": "Colombia",
+      "lnglat": [
+        -74.297333,
+        4.570868
+      ],
+      "audio": {
+        "position": 2,
+        "beats": 8,
+        "volume": 0.7
+      },
+      "display": {
+        "color": "hsv(106,64,97)"
+      }
+    },
+    "lik03-t03-c03": {
+      "name": "lik03-t03-c03",
+      "track": "percusion",
+      "title": "Borregos. Tonada del rabudo",
+      "album": "Traditional Music of Peru, Vol. 8. Piura",
+      "artist": "Banda Hermanos Dedios Zapata",
+      "year": 1994,
+      "country": "Peru",
+      "lnglat": [
+        -75.015152,
+        -9.189967
+      ],
+      "audio": {
+        "position": 3,
+        "beats": 2,
+        "volume": 0.7
+      },
+      "display": {
+        "color": "hsv(152,92,90)"
       }
     },
     "lik03-t02-c01": {
@@ -196,69 +259,6 @@
       },
       "display": {
         "color": "hsv(26,93,92)"
-      }
-    },
-    "lik03-t03-c01": {
-      "name": "lik03-t03-c01",
-      "track": "track-2",
-      "title": "Mistura No. 4",
-      "album": "Batucada Genial",
-      "artist": "Mester Geraldo e Sua Bateria",
-      "year": 1977,
-      "country": "Brasil",
-      "lnglat": [
-        -51.92528,
-        -14.235004
-      ],
-      "audio": {
-        "position": 1,
-        "beats": 4,
-        "volume": 0.7
-      },
-      "display": {
-        "color": "hsv(53,65,98)"
-      }
-    },
-    "lik03-t03-c02": {
-      "name": "lik03-t03-c02",
-      "track": "track-2",
-      "title": "Baila Rosita",
-      "album": "A Orillas del Magdalena",
-      "artist": "Los Guacharacos",
-      "year": 2009,
-      "country": "Colombia",
-      "lnglat": [
-        -74.297333,
-        4.570868
-      ],
-      "audio": {
-        "position": 2,
-        "beats": 8,
-        "volume": 0.7
-      },
-      "display": {
-        "color": "hsv(106,64,97)"
-      }
-    },
-    "lik03-t03-c03": {
-      "name": "lik03-t03-c03",
-      "track": "track-2",
-      "title": "Borregos. Tonada del rabudo",
-      "album": "Traditional Music of Peru, Vol. 8. Piura",
-      "artist": "Banda Hermanos Dedios Zapata",
-      "year": 1994,
-      "country": "Peru",
-      "lnglat": [
-        -75.015152,
-        -9.189967
-      ],
-      "audio": {
-        "position": 3,
-        "beats": 2,
-        "volume": 0.7
-      },
-      "display": {
-        "color": "hsv(152,92,90)"
       }
     },
     "lik03-t04-c01": {
@@ -639,5 +639,83 @@
         "color": "hsv(152,92,90)"
       }
     }
-  }
+  },
+  "tracks": [
+    {
+      "name": "guitarras",
+      "clips": [
+        "lik03-t01-c01",
+        "lik03-t01-c02",
+        "lik03-t01-c03",
+        "lik03-t01-c04"
+      ],
+      "color": "#23f103"
+    },
+    {
+      "name": "percusion",
+      "clips": [
+        "lik03-t03-c01",
+        "lik03-t03-c02",
+        "lik03-t03-c03"
+      ],
+      "color": "#03f16e"
+    },
+    {
+      "name": "track-1",
+      "clips": [
+        "lik03-t02-c01",
+        "lik03-t02-c02",
+        "lik03-t02-c03"
+      ],
+      "color": "#f103c1"
+    },
+    {
+      "name": "track-3",
+      "clips": [
+        "lik03-t04-c01",
+        "lik03-t04-c02"
+      ],
+      "color": "#f10366"
+    },
+    {
+      "name": "track-4",
+      "clips": [
+        "lik03-t05-c01",
+        "lik03-t05-c02",
+        "lik03-t05-c03"
+      ],
+      "color": "#03a9f1"
+    },
+    {
+      "name": "track-5",
+      "clips": [
+        "lik03-t06-c01",
+        "lik03-t06-c02",
+        "lik03-t06-c03"
+      ],
+      "color": "#0342f1"
+    },
+    {
+      "name": "track-6",
+      "clips": [
+        "lik03-t07-c01",
+        "lik03-t07-c02",
+        "lik03-t07-c03",
+        "lik03-t07-c04",
+        "lik03-t07-c05"
+      ],
+      "color": "#f18e03"
+    },
+    {
+      "name": "track-7",
+      "clips": [
+        "lik03-t08-c01",
+        "lik03-t08-c02",
+        "lik03-t08-c03",
+        "lik03-t08-c04",
+        "lik03-t08-c05"
+      ],
+      "color": "#e5f103"
+    }
+  ]
 }

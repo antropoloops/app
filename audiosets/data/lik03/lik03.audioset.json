@@ -15,20 +15,13 @@
       ]
     },
     "sources": {
-      "audio": [
-        "/audiosets/lik/{{filename}}.wav"
-      ],
-      "covers": [
-        "/audiosets/lik/lik-03-covers/{{filename}}.jpg"
-      ]
+      "audio": ["/audiosets/lik/{{filename}}.wav"],
+      "covers": ["/audiosets/lik/lik-03-covers/{{filename}}.jpg"]
     }
   },
   "audio": {
     "bpm": 125,
-    "signature": [
-      4,
-      4
-    ],
+    "signature": [4, 4],
     "trackMaxVoices": 1,
     "quantize": true,
     "defaults": {

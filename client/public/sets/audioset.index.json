@@ -1,0 +1,25 @@
+{
+  "audiosets": [
+    {
+      "id": "continentes",
+      "meta": {
+        "title": "Continentes",
+        "description": "Sessión Antropoloops 01"
+      }
+    },
+    {
+      "id": "lik03",
+      "meta": {
+        "title": "Lik03",
+        "description": "Antropoloops Lik Session 03"
+      }
+    },
+    {
+      "id": "test",
+      "meta": {
+        "title": "Test",
+        "description": "Set de prueba de Antropoloops"
+      }
+    }
+  ]
+}

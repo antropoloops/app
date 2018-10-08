@@ -452,5 +452,61 @@
         "color": "hsv(115,88,91)"
       }
     }
-  }
+  },
+  "tracks": [
+    {
+      "name": "track-1",
+      "clips": [
+        "mocita",
+        "orillas",
+        "ossie"
+      ],
+      "color": "#23f103"
+    },
+    {
+      "name": "track-2",
+      "clips": [
+        "nubian",
+        "pae",
+        "tabla"
+      ],
+      "color": "#03f16e"
+    },
+    {
+      "name": "track-3",
+      "clips": [
+        "camino",
+        "mariola",
+        "mississipi"
+      ],
+      "color": "#f103c1"
+    },
+    {
+      "name": "track-4",
+      "clips": [
+        "ballade",
+        "funeraire",
+        "madinda"
+      ],
+      "color": "#f10366"
+    },
+    {
+      "name": "track-5",
+      "clips": [
+        "agnus-dei",
+        "ed-lewis",
+        "rueda"
+      ],
+      "color": "#03a9f1"
+    },
+    {
+      "name": "track-6",
+      "clips": [
+        "are-are",
+        "indvumo",
+        "ogbeler"
+      ],
+      "color": "#0342f1"
+    }
+  ]
 }

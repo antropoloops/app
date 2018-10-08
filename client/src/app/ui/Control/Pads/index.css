@@ -1,0 +1,25 @@
+.Pads {
+  max-width: 30em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Pad {
+  width: 80px;
+  height: 80px;
+  margin: 0 1em 1em 0;
+  opacity: 1;
+}
+
+.Pad:hover {
+  opacity: 0.5;
+}
+
+.Pad img {
+  width: 100%;
+  height: 100%;
+}
+
+.Pad.pressed {
+  opacity: 1;
+}

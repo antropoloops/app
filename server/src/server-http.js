@@ -10,8 +10,7 @@ module.exports = function createHttpServer(clients, rooms) {
     send(res, 200, {
       version,
       startedAt,
-      users: clients.getAvailableUsers(),
-      rooms: rooms.serializeChatrooms()
+      users: clients.getAvailableUsers()
     });
   });
 

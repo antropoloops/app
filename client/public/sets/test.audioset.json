@@ -61,7 +61,10 @@
       "name": "accomp1",
       "track": "track-samples",
       "title": "Acompañamiento 1",
-      "lnglat": [-77.297508, 18.109581],
+      "lnglat": [
+        -77.297508,
+        18.109581
+      ],
       "audio": {
         "beats": 1,
         "volume": 0.7
@@ -74,7 +77,10 @@
       "name": "accomp2",
       "track": "track-samples",
       "title": "Acompañamiento 2",
-      "lnglat": [-74.29733299999998, 4.570868],
+      "lnglat": [
+        -74.29733299999998,
+        4.570868
+      ],
       "audio": {
         "beats": 1,
         "volume": 0.7
@@ -87,7 +93,10 @@
       "name": "melody1",
       "track": "track-samples",
       "title": "Melodía 1",
-      "lnglat": [-3.7492200000000366, 40.46366700000001],
+      "lnglat": [
+        -3.7492200000000366,
+        40.46366700000001
+      ],
       "audio": {
         "beats": 1,
         "volume": 0.7
@@ -100,7 +109,10 @@
       "name": "melody2",
       "track": "track-samples",
       "title": "Melodía 2",
-      "lnglat": [30.802498000000014, 26.820553],
+      "lnglat": [
+        30.802498000000014,
+        26.820553
+      ],
       "audio": {
         "beats": 1,
         "volume": 0.7
@@ -113,7 +125,10 @@
       "name": "rhythm1",
       "track": "track-samples",
       "title": "Rítmo 1",
-      "lnglat": [69.34511599999996, 30.375321],
+      "lnglat": [
+        69.34511599999996,
+        30.375321
+      ],
       "audio": {
         "beats": 1,
         "volume": 0.7
@@ -126,7 +141,10 @@
       "name": "rhythm2",
       "track": "track-samples",
       "title": "Rítmo 2",
-      "lnglat": [-149.456815, -17.649632],
+      "lnglat": [
+        -149.456815,
+        -17.649632
+      ],
       "audio": {
         "beats": 1,
         "volume": 0.7
@@ -139,7 +157,10 @@
       "name": "voice1",
       "track": "track-samples",
       "title": "Voz 2",
-      "lnglat": [-89.39852830000001, 32.3546679],
+      "lnglat": [
+        -89.39852830000001,
+        32.3546679
+      ],
       "audio": {
         "beats": 1,
         "volume": 0.7
@@ -152,7 +173,10 @@
       "name": "voice2",
       "track": "track-samples",
       "title": "Voz 1",
-      "lnglat": [21.824311999999964, 39.074208],
+      "lnglat": [
+        21.824311999999964,
+        39.074208
+      ],
       "audio": {
         "beats": 1,
         "volume": 0.7
@@ -165,7 +189,10 @@
       "name": "voice3",
       "track": "track-samples",
       "title": "Voz 3",
-      "lnglat": [-63.616671999999994, -38.416097],
+      "lnglat": [
+        -63.616671999999994,
+        -38.416097
+      ],
       "audio": {
         "beats": 1,
         "volume": 0.7
@@ -174,5 +201,22 @@
         "color": "hsv(106,89,98)"
       }
     }
-  }
+  },
+  "tracks": [
+    {
+      "name": "track-samples",
+      "clips": [
+        "accomp1",
+        "accomp2",
+        "melody1",
+        "melody2",
+        "rhythm1",
+        "rhythm2",
+        "voice1",
+        "voice2",
+        "voice3"
+      ],
+      "color": "#23f103"
+    }
+  ]
 }

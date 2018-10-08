@@ -16,3 +16,5 @@ export const saveState = state => {
     console.log("Error saving state", e);
   }
 };
+
+window.resetLocalStorage = () => saveState({});
