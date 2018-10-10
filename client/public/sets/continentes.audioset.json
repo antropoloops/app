@@ -126,8 +126,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(301,56,94)"
-      }
+        "color": "#44f019"
+      },
+      "trackId": 0
     },
     "orillas": {
       "name": "orillas",
@@ -145,8 +146,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(151,60,97)"
-      }
+        "color": "#4ff019"
+      },
+      "trackId": 0
     },
     "ossie": {
       "name": "ossie",
@@ -164,8 +166,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,89,98)"
-      }
+        "color": "#24f019"
+      },
+      "trackId": 0
     },
     "nubian": {
       "name": "nubian",
@@ -183,8 +186,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(337,99,90)"
-      }
+        "color": "#19f07a"
+      },
+      "trackId": 1
     },
     "pae": {
       "name": "pae",
@@ -202,8 +206,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(222,63,94)"
-      }
+        "color": "#19f088"
+      },
+      "trackId": 1
     },
     "tabla": {
       "name": "tabla",
@@ -221,8 +226,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(195,99,94)"
-      }
+        "color": "#19f09e"
+      },
+      "trackId": 1
     },
     "camino": {
       "name": "camino",
@@ -240,8 +246,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(53,65,98)"
-      }
+        "color": "#f019d0"
+      },
+      "trackId": 2
     },
     "mariola": {
       "name": "mariola",
@@ -259,8 +266,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,64,97)"
-      }
+        "color": "#f019e9"
+      },
+      "trackId": 2
     },
     "mississipi": {
       "name": "mississipi",
@@ -278,8 +286,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(26,93,92)"
-      }
+        "color": "#f019de"
+      },
+      "trackId": 2
     },
     "ballade": {
       "name": "ballade",
@@ -297,8 +306,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(300,61,99)"
-      }
+        "color": "#f01981"
+      },
+      "trackId": 3
     },
     "funeraire": {
       "name": "funeraire",
@@ -316,8 +326,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(332,99,97)"
-      }
+        "color": "#f01961"
+      },
+      "trackId": 3
     },
     "madinda": {
       "name": "madinda",
@@ -335,8 +346,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(152,92,90)"
-      }
+        "color": "#f0197d"
+      },
+      "trackId": 3
     },
     "agnus-dei": {
       "name": "agnus-dei",
@@ -354,8 +366,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(34,94,96)"
-      }
+        "color": "#19b3f0"
+      },
+      "trackId": 4
     },
     "ed-lewis": {
       "name": "ed-lewis",
@@ -373,8 +386,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(190,50,95)"
-      }
+        "color": "#19ccf0"
+      },
+      "trackId": 4
     },
     "rueda": {
       "name": "rueda",
@@ -392,8 +406,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(223,74,91)"
-      }
+        "color": "#19b7f0"
+      },
+      "trackId": 4
     },
     "are-are": {
       "name": "are-are",
@@ -411,8 +426,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(158,50,99)"
-      }
+        "color": "#1985f0"
+      },
+      "trackId": 5
     },
     "indvumo": {
       "name": "indvumo",
@@ -430,8 +446,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(59,99,92)"
-      }
+        "color": "#1964f0"
+      },
+      "trackId": 5
     },
     "ogbeler": {
       "name": "ogbeler",
@@ -449,8 +466,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(115,88,91)"
-      }
+        "color": "#1976f0"
+      },
+      "trackId": 5
     }
   },
   "tracks": [
@@ -461,7 +479,8 @@
         "orillas",
         "ossie"
       ],
-      "color": "#23f103"
+      "id": 0,
+      "color": "#4bf019"
     },
     {
       "name": "track-2",
@@ -470,7 +489,8 @@
         "pae",
         "tabla"
       ],
-      "color": "#03f16e"
+      "id": 1,
+      "color": "#19f09e"
     },
     {
       "name": "track-3",
@@ -479,7 +499,8 @@
         "mariola",
         "mississipi"
       ],
-      "color": "#f103c1"
+      "id": 2,
+      "color": "#f019f0"
     },
     {
       "name": "track-4",
@@ -488,7 +509,8 @@
         "funeraire",
         "madinda"
       ],
-      "color": "#f10366"
+      "id": 3,
+      "color": "#f01956"
     },
     {
       "name": "track-5",
@@ -497,7 +519,8 @@
         "ed-lewis",
         "rueda"
       ],
-      "color": "#03a9f1"
+      "id": 4,
+      "color": "#19aff0"
     },
     {
       "name": "track-6",
@@ -506,7 +529,8 @@
         "indvumo",
         "ogbeler"
       ],
-      "color": "#0342f1"
+      "id": 5,
+      "color": "#196ff0"
     }
   ]
 }

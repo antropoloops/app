@@ -2,45 +2,37 @@ import React from "react";
 import { connect } from "react-redux";
 import Pads from "./Pads";
 import Pad from "./Pads/Pad";
-import { openTrack } from "../../model/control";
-import { getSession } from "../../../session";
+import { openTrack, padPress, padRelease } from "../../model/control";
 
-const togglePlay = (set, clip) => () => {
-  const player = getSession().player;
-  player.togglePlay(clip.name);
-};
-
-const renderTracks = (tracks, dispatch) =>
-  tracks.map(track => (
+const renderTracks = ({ set, tracksPlaying, dispatch }) =>
+  set.tracks.map(track => (
     <Pad
       key={track.name}
       label={track.name}
       color={track.color}
-      onClick={() => dispatch(openTrack(track))}
+      isPressed={tracksPlaying[track.name]}
+      onPress={() => dispatch(openTrack(track))}
     />
   ));
 
-const renderClips = (set, clips, dispatch) =>
-  console.log(clips) ||
-  clips.map(name => {
+const renderClips = ({ set, track, clipsPlaying, dispatch }) =>
+  track.clips.map(name => {
     const clip = set.clips[name];
     return (
       <Pad
         key={clip.name}
         label={clip.name}
-        color={clip.color}
-        onClick={togglePlay(set, clip)}
+        color={clip.display.color}
+        isPressed={clipsPlaying[clip.name]}
+        onPress={() => dispatch(padPress(clip.name))}
+        onRelease={() => dispatch(padRelease(clip.name))}
       />
     );
   });
 
-const Control = ({ set, track, dispatch }) => (
+const Control = props => (
   <div>
-    <Pads>
-      {track
-        ? renderClips(set, track.clips, dispatch)
-        : renderTracks(set.tracks, dispatch)}
-    </Pads>
+    <Pads>{props.track ? renderClips(props) : renderTracks(props)}</Pads>
   </div>
 );
 

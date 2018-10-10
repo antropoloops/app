@@ -69,8 +69,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,89,98)"
-      }
+        "color": "#2bf019"
+      },
+      "trackId": 0
     },
     "lik03-t01-c02": {
       "name": "lik03-t01-c02",
@@ -90,8 +91,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(151,60,97)"
-      }
+        "color": "#48f019"
+      },
+      "trackId": 0
     },
     "lik03-t01-c03": {
       "name": "lik03-t01-c03",
@@ -111,8 +113,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(301,56,94)"
-      }
+        "color": "#44f019"
+      },
+      "trackId": 0
     },
     "lik03-t01-c04": {
       "name": "lik03-t01-c04",
@@ -132,8 +135,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(337,99,90)"
-      }
+        "color": "#3af019"
+      },
+      "trackId": 0
     },
     "lik03-t03-c01": {
       "name": "lik03-t03-c01",
@@ -153,8 +157,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(53,65,98)"
-      }
+        "color": "#19f088"
+      },
+      "trackId": 1
     },
     "lik03-t03-c02": {
       "name": "lik03-t03-c02",
@@ -174,8 +179,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,64,97)"
-      }
+        "color": "#19f093"
+      },
+      "trackId": 1
     },
     "lik03-t03-c03": {
       "name": "lik03-t03-c03",
@@ -195,8 +201,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(152,92,90)"
-      }
+        "color": "#19f081"
+      },
+      "trackId": 1
     },
     "lik03-t02-c01": {
       "name": "lik03-t02-c01",
@@ -216,8 +223,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(195,99,94)"
-      }
+        "color": "#f019be"
+      },
+      "trackId": 2
     },
     "lik03-t02-c02": {
       "name": "lik03-t02-c02",
@@ -237,8 +245,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(222,63,94)"
-      }
+        "color": "#f019e1"
+      },
+      "trackId": 2
     },
     "lik03-t02-c03": {
       "name": "lik03-t02-c03",
@@ -258,8 +267,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(26,93,92)"
-      }
+        "color": "#f019c5"
+      },
+      "trackId": 2
     },
     "lik03-t04-c01": {
       "name": "lik03-t04-c01",
@@ -279,8 +289,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(300,61,99)"
-      }
+        "color": "#f01953"
+      },
+      "trackId": 3
     },
     "lik03-t04-c02": {
       "name": "lik03-t04-c02",
@@ -300,8 +311,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(332,99,97)"
-      }
+        "color": "#f0196f"
+      },
+      "trackId": 3
     },
     "lik03-t05-c01": {
       "name": "lik03-t05-c01",
@@ -321,8 +333,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(190,50,95)"
-      }
+        "color": "#19a8f0"
+      },
+      "trackId": 4
     },
     "lik03-t05-c02": {
       "name": "lik03-t05-c02",
@@ -342,8 +355,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(223,74,91)"
-      }
+        "color": "#199ef0"
+      },
+      "trackId": 4
     },
     "lik03-t05-c03": {
       "name": "lik03-t05-c03",
@@ -363,8 +377,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(34,94,96)"
-      }
+        "color": "#199af0"
+      },
+      "trackId": 4
     },
     "lik03-t06-c01": {
       "name": "lik03-t06-c01",
@@ -384,8 +399,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(59,99,92)"
-      }
+        "color": "#1981f0"
+      },
+      "trackId": 5
     },
     "lik03-t06-c02": {
       "name": "lik03-t06-c02",
@@ -405,8 +421,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(115,88,91)"
-      }
+        "color": "#197df0"
+      },
+      "trackId": 5
     },
     "lik03-t06-c03": {
       "name": "lik03-t06-c03",
@@ -426,8 +443,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(158,50,99)"
-      }
+        "color": "#195af0"
+      },
+      "trackId": 5
     },
     "lik03-t07-c01": {
       "name": "lik03-t07-c01",
@@ -447,8 +465,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,89,98)"
-      }
+        "color": "#f07619"
+      },
+      "trackId": 6
     },
     "lik03-t07-c02": {
       "name": "lik03-t07-c02",
@@ -468,8 +487,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(151,60,97)"
-      }
+        "color": "#f0a519"
+      },
+      "trackId": 6
     },
     "lik03-t07-c03": {
       "name": "lik03-t07-c03",
@@ -489,8 +509,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(301,56,94)"
-      }
+        "color": "#f07d19"
+      },
+      "trackId": 6
     },
     "lik03-t07-c04": {
       "name": "lik03-t07-c04",
@@ -510,8 +531,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(337,99,90)"
-      }
+        "color": "#f07619"
+      },
+      "trackId": 6
     },
     "lik03-t07-c05": {
       "name": "lik03-t07-c05",
@@ -531,8 +553,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(195,99,94)"
-      }
+        "color": "#f08f19"
+      },
+      "trackId": 6
     },
     "lik03-t08-c01": {
       "name": "lik03-t08-c01",
@@ -552,8 +575,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(222,63,94)"
-      }
+        "color": "#f0de19"
+      },
+      "trackId": 7
     },
     "lik03-t08-c02": {
       "name": "lik03-t08-c02",
@@ -573,8 +597,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(26,93,92)"
-      }
+        "color": "#ecf019"
+      },
+      "trackId": 7
     },
     "lik03-t08-c03": {
       "name": "lik03-t08-c03",
@@ -594,8 +619,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(53,65,98)"
-      }
+        "color": "#e5f019"
+      },
+      "trackId": 7
     },
     "lik03-t08-c04": {
       "name": "lik03-t08-c04",
@@ -615,8 +641,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,64,97)"
-      }
+        "color": "#f0e119"
+      },
+      "trackId": 7
     },
     "lik03-t08-c05": {
       "name": "lik03-t08-c05",
@@ -636,8 +663,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(152,92,90)"
-      }
+        "color": "#f0e919"
+      },
+      "trackId": 7
     }
   },
   "tracks": [
@@ -649,7 +677,8 @@
         "lik03-t01-c03",
         "lik03-t01-c04"
       ],
-      "color": "#23f103"
+      "id": 0,
+      "color": "#41f019"
     },
     {
       "name": "percusion",
@@ -658,7 +687,8 @@
         "lik03-t03-c02",
         "lik03-t03-c03"
       ],
-      "color": "#03f16e"
+      "id": 1,
+      "color": "#19f0a1"
     },
     {
       "name": "track-1",
@@ -667,7 +697,8 @@
         "lik03-t02-c02",
         "lik03-t02-c03"
       ],
-      "color": "#f103c1"
+      "id": 2,
+      "color": "#f019de"
     },
     {
       "name": "track-3",
@@ -675,7 +706,8 @@
         "lik03-t04-c01",
         "lik03-t04-c02"
       ],
-      "color": "#f10366"
+      "id": 3,
+      "color": "#f01976"
     },
     {
       "name": "track-4",
@@ -684,7 +716,8 @@
         "lik03-t05-c02",
         "lik03-t05-c03"
       ],
-      "color": "#03a9f1"
+      "id": 4,
+      "color": "#19a1f0"
     },
     {
       "name": "track-5",
@@ -693,7 +726,8 @@
         "lik03-t06-c02",
         "lik03-t06-c03"
       ],
-      "color": "#0342f1"
+      "id": 5,
+      "color": "#1964f0"
     },
     {
       "name": "track-6",
@@ -704,7 +738,8 @@
         "lik03-t07-c04",
         "lik03-t07-c05"
       ],
-      "color": "#f18e03"
+      "id": 6,
+      "color": "#f09619"
     },
     {
       "name": "track-7",
@@ -715,7 +750,8 @@
         "lik03-t08-c04",
         "lik03-t08-c05"
       ],
-      "color": "#e5f103"
+      "id": 7,
+      "color": "#f0da19"
     }
   ]
 }

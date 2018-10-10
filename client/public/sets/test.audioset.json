@@ -70,8 +70,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,89,98)"
-      }
+        "color": "#3df019"
+      },
+      "trackId": 0
     },
     "accomp2": {
       "name": "accomp2",
@@ -86,8 +87,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,89,98)"
-      }
+        "color": "#44f019"
+      },
+      "trackId": 0
     },
     "melody1": {
       "name": "melody1",
@@ -102,8 +104,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,89,98)"
-      }
+        "color": "#21f019"
+      },
+      "trackId": 0
     },
     "melody2": {
       "name": "melody2",
@@ -118,8 +121,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,89,98)"
-      }
+        "color": "#32f019"
+      },
+      "trackId": 0
     },
     "rhythm1": {
       "name": "rhythm1",
@@ -134,8 +138,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,89,98)"
-      }
+        "color": "#24f019"
+      },
+      "trackId": 0
     },
     "rhythm2": {
       "name": "rhythm2",
@@ -150,8 +155,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,89,98)"
-      }
+        "color": "#41f019"
+      },
+      "trackId": 0
     },
     "voice1": {
       "name": "voice1",
@@ -166,8 +172,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,89,98)"
-      }
+        "color": "#28f019"
+      },
+      "trackId": 0
     },
     "voice2": {
       "name": "voice2",
@@ -182,8 +189,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,89,98)"
-      }
+        "color": "#48f019"
+      },
+      "trackId": 0
     },
     "voice3": {
       "name": "voice3",
@@ -198,8 +206,9 @@
         "volume": 0.7
       },
       "display": {
-        "color": "hsv(106,89,98)"
-      }
+        "color": "#21f019"
+      },
+      "trackId": 0
     }
   },
   "tracks": [
@@ -216,7 +225,8 @@
         "voice2",
         "voice3"
       ],
-      "color": "#23f103"
+      "id": 0,
+      "color": "#4bf019"
     }
   ]
 }

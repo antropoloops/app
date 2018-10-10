@@ -15,9 +15,20 @@ const RANGES = [
   [25, 40],
   [50, 65]
 ];
+const MAX_TRACKS = RANGES.length;
 
-const COLORS = RANGES.map(([min, max]) => random(min, max))
-  .map(h => chroma.hsv(h, S, V))
-  .map(color => color.hex());
+function createColor(h, s = S, v = V) {
+  return chroma.hsv(h, S, V).hex();
+}
 
-module.exports = COLORS;
+function fromRange([min, max]) {
+  return createColor(random(min, max));
+}
+
+function getTrackColor(trackNum) {
+  return fromRange(RANGES[trackNum % MAX_TRACKS]);
+}
+
+const COLORS = RANGES.map(fromRange);
+
+module.exports = { RANGES, COLORS, getTrackColor, fromRange, createColor };

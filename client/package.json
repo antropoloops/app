@@ -19,9 +19,11 @@
   ],
   "dependencies": {
     "audio-context": "^1.0.3",
+    "classcat": "^3.2.3",
     "lodash": "^4.17.11",
     "material-ui": "^0.20.2",
     "nanobus": "^4.3.4",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",

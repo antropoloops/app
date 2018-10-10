@@ -9,7 +9,7 @@ import control from "../model/control";
 import player from "../model/player";
 
 export default function create() {
-  const initialState = loadState();
+  const initialState = clearState(loadState());
   console.log("INITIAL", initialState);
 
   const reducer = combineReducers({
@@ -32,4 +32,10 @@ export default function create() {
     }, 1000)
   );
   return store;
+}
+
+function clearState(state) {
+  state.control.clipsPlaying = {};
+  state.control.tracksPlaying = {};
+  return state;
 }

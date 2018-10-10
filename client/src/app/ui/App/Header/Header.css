@@ -1,0 +1,17 @@
+.Header {
+  display: flex;
+}
+
+.Breadcrumbs {
+  flex-grow: 1;
+}
+.TracksHeader {
+  display: flex;
+}
+.TracksHeader .Track {
+  border-top: 1px solid white;
+  margin-right: 1px;
+
+  width: 16px;
+  height: 16px;
+}

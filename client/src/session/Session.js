@@ -1,7 +1,7 @@
-import nanobus from "nanobus";
 import connect from "./room";
-import Resources from "./Bundle";
+import Resources from "./Resources";
 import Player from "./Player";
+import createEventBus, { audiosetChanged } from "./events";
 import { getResources, getPlayer } from "./cache";
 
 /**
@@ -11,14 +11,20 @@ import { getResources, getPlayer } from "./cache";
 class Session {
   constructor(url, websockets) {
     this.url = url;
-    this.events = nanobus();
-    this.events.on("*", (event, payload) =>
-      console.log("EVENT >>", event, payload)
-    );
+    this.events = createEventBus();
+    if (process.env.NODE_ENV === "development") {
+      this.events.on("*", (event, payload) =>
+        console.log("@@EVENT", event, payload)
+      );
+    }
     connect(
       this.events,
       websockets
     );
+  }
+
+  on(event, cb) {
+    this.events.on(event, cb);
   }
 
   use(set) {
@@ -26,7 +32,20 @@ class Session {
     const resource = getResources(set, () => new Resources(events, set));
     const player = getPlayer(set, () => new Player(events, set, resource));
     Object.assign(this, { set, resource, player });
-    console.log("Session", this);
+    events.emit(audiosetChanged(set, resource));
+    return set;
+  }
+
+  fetchIndex() {
+    return fetch(`${this.url}/audioset.index.json`).then(response =>
+      response.json()
+    );
+  }
+
+  loadAudioset(setId) {
+    return fetch(`${this.url}/${setId}.audioset.json`)
+      .then(res => res.json())
+      .then(set => this.use(set));
   }
 }
 

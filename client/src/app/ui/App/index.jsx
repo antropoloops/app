@@ -14,19 +14,23 @@ const closeCurrentTrack = (track, dispatch) => () =>
 
 class App extends React.Component {
   render() {
-    const { isLoading, hasAudioset, set, dispatch, track } = this.props;
+    const { audiosets, control, dispatch } = this.props;
+    const set = audiosets.current;
+    const { track, tracksPlaying } = control;
+    const isLoading = audiosets.status !== "done";
     return (
       <div className="App">
         <Header
           set={set}
           track={track}
+          tracksPlaying={tracksPlaying}
           onHomeClicked={reloadSession(dispatch)}
           onSetClicked={closeCurrentTrack(track, dispatch)}
           onTrackClicked={closeCurrentTrack(track, dispatch)}
         />
         <Loading
           isLoading={isLoading}
-          render={() => (hasAudioset ? <Control /> : <Session />)}
+          render={() => (set ? <Control /> : <Session />)}
         />
       </div>
     );
@@ -35,11 +39,6 @@ class App extends React.Component {
   renderSession() {}
 }
 
-const mapStateToProps = state => ({
-  set: state.audiosets.current,
-  track: state.control.track,
-  isLoading: state.audiosets.status !== "done",
-  hasAudioset: !!state.audiosets.current
-});
+const mapStateToProps = state => state;
 
 export default connect(mapStateToProps)(App);

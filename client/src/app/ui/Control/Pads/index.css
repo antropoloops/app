@@ -5,14 +5,28 @@
 }
 
 .Pad {
+  position: relative;
   width: 80px;
   height: 80px;
+  padding: 0;
   margin: 0 1em 1em 0;
   opacity: 1;
 }
 
-.Pad:hover {
-  opacity: 0.5;
+.Pad:hover .body {
+  opacity: 0.9;
+}
+
+.Pad .body {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.Pad .label {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 .Pad img {
@@ -20,6 +34,6 @@
   height: 100%;
 }
 
-.Pad.pressed {
+.Pad.pressed .body {
   opacity: 1;
 }

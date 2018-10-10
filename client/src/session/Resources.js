@@ -1,8 +1,5 @@
+import { loadAudioEnded, loadResourcesStarted } from "./events";
 import context from "audio-context";
-
-export const AUDIO_LOAD_START = "/resources/audio-load-start";
-export const AUDIO_LOAD_ALL_END = "/resources/audio-loaded-end";
-export const AUDIO_LOADED = "/resources/audio-loaded";
 
 export default class Resources {
   constructor(events, set) {
@@ -22,8 +19,9 @@ export default class Resources {
 
 function startLoading(events, data, clipNames, types, sources) {
   const requests = createRequests(types, sources, clipNames);
+  events.emit(loadResourcesStarted(requests));
   fetchAudio(data, requests).then(requests => {
-    events.emit(AUDIO_LOAD_ALL_END, requests);
+    events.emit(loadAudioEnded(requests));
     console.log("All audio file loaded");
   });
 }

@@ -1,41 +1,47 @@
-import Sampler from "./Sampler";
-
-const SAMPLE_STARTED = "/player/sample-started";
-const SAMPLE_STOPPED = "/player/sample-stopped";
+import { sampleStarted, sampleStopped } from "./events";
 
 export default class Player {
-  constructor(events, set, resources) {
+  constructor(events, set) {
     this.events = events;
     this.set = set;
-    this.resources = resources;
-    this.sampler = new Sampler();
-    this.playing = {};
-    this.callbacks = {};
+    this.tracks = {};
   }
 
+  pressPad(clipId) {
+    return this.togglePlay(clipId);
+  }
+
+  releasePad(clipId) {}
+
   togglePlay(clipId) {
-    if (this.playing[clipId]) this.stop(clipId);
-    else this.start(clipId);
+    if (!this.stop(clipId)) this.start(clipId);
+  }
+
+  getTrack(clipId) {
+    const clip = this.set.clips[clipId];
+    return clip && this.set.tracks[clip.trackId];
   }
 
   start(clipId) {
-    const { set, resources, playing, callbacks, sampler } = this;
+    const { tracks, events } = this;
 
-    const clip = set.clips[clipId];
-    if (!clip) return console.log("Invalid clipdId", clipId);
-    const buffer = resources.audio[clipId];
-    if (!buffer) return console.log("Audio not loaded");
-
-    playing[clipId] = true;
-    callbacks[clipId] = sampler.start(buffer);
-    this.events.emit(SAMPLE_STARTED, clipId);
+    const track = this.getTrack(clipId);
+    const prevId = tracks[track.id];
+    if (prevId) events.emit(sampleStopped(prevId, track));
+    tracks[track.id] = clipId;
+    events.emit(sampleStarted(clipId, track));
   }
 
   stop(clipId) {
-    if (this.playing[clipId]) {
-      this.playing[clipId] = false;
-      this.callbacks[clipId]();
-      this.events.emit(SAMPLE_STOPPED, clipId);
+    const { tracks, events } = this;
+    const track = this.getTrack(clipId);
+    const inTrack = tracks[track.id];
+    if (track.id && inTrack === clipId) {
+      tracks[track.id] = undefined;
+      events.emit(sampleStopped(clipId, track));
+      return true;
+    } else {
+      return false;
     }
   }
 

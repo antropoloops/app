@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 
 import * as serviceWorker from "../offline/serviceWorker";
-import createStore from "./store/createStore";
+import createStore from "./store";
 import { loadIndex } from "./model/audiosets";
+import createSampler from "../audio";
 import App from "./ui/App";
 import "./ui/index.css";
 import { createSession } from "../session";
@@ -12,8 +13,9 @@ import { createSession } from "../session";
 // Create session first!
 const session = createSession("/sets");
 
-const store = createStore();
+const store = createStore(session);
 window.store = store;
+createSampler(session);
 
 //store.dispatch(loadAllAudiosets());
 

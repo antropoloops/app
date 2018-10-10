@@ -1,7 +1,7 @@
 const _ = require("lodash");
 const fs = require("fs");
 const path = require("path");
-const COLORS = require("../src/colors");
+const { buildAudioset } = require("../src/buildAudioset");
 
 const json = obj => JSON.stringify(obj, null, 2);
 const mkdir = dir => !fs.existsSync(dir) && fs.mkdirSync(dir);
@@ -43,21 +43,14 @@ function writeIndex(sets) {
 function buildSet(name, files) {
   const fileName = `${name}.audioset.json`;
   const filePath = path.join(SOURCE, name, fileName);
-  const set = readJson(filePath);
-  set.clips = buildClips(set, files.filter(f => f.length > 2));
-  const tracks = _.groupBy(set.clips, "track");
-  set.tracks = _.map(tracks, (track, name) => ({
-    name,
-    clips: track.map(clip => clip.name)
-  })).map((track, i) => {
-    track.color = COLORS[i];
-    return track;
-  });
+  const base = readJson(filePath);
+  const clips = buildClips(files.filter(f => f.length > 2));
+  const set = buildAudioset(base, clips);
   writeJsonToOutputs(fileName, set);
   return set;
 }
 
-function buildClips(set, files) {
+function buildClips(files) {
   return files.reduce((clips, file) => {
     const [set, track, fileName] = file;
     const [name] = fileName.split(".");
