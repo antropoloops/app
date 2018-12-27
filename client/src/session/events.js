@@ -1,38 +1,31 @@
 import nanobus from "nanobus";
 
-const eventType = event =>
-  typeof event === "function" ? event().type : event.toString();
+export const events = nanobus();
 
-export default function createEventBus() {
-  const events = nanobus();
-  const emit = event => events.emit(event.type, event.payload);
-  const on = (event, cb) => events.on(eventType(event), cb);
-  return { emit, on };
+export const START_VISUALS = "START_VISUALS";
+export const startVisuals = (audioset, el) => ({
+  type: START_VISUALS,
+  audioset,
+  el
+});
+export const STOP_VISUALS = "STOP_VISUALS";
+export const stopVisuals = () => ({ type: STOP_VISUALS });
+
+/**
+ * A unified event model
+ * @param {*} event
+ */
+export function emit(event) {
+  events.emit(event.type, event);
 }
 
-// SESSION
-export const audiosetChanged = (set, resources) => ({
-  type: "/session/audiosetChanged",
-  payload: { set, resources }
+events.on("*", (type, event) => {
+  console.log("event", type, event);
 });
 
-// RESOURCES
-export const loadResourcesStarted = requests => ({
-  type: "/resources/loadResourcesStarted",
-  payload: requests
-});
-export const loadAudioEnded = requests => ({
-  type: "/resources/loadAudioEnded",
-  payload: requests
-});
+const middleware = store => next => action => {
+  next(action);
+  events.emit("action", action);
+};
 
-// PLAYER
-export const sampleStarted = (clipId, track) => ({
-  type: "/player/sampleStarted",
-  payload: { clipId, track }
-});
-
-export const sampleStopped = (clipId, track) => ({
-  type: "/player/sampleStopped",
-  payload: { clipId, track }
-});
+export default middleware;

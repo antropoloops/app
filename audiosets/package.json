@@ -1,9 +1,0 @@
-{
-  "scripts": {
-    "build": "node scripts/build.js"
-  },
-  "dependencies": {
-    "chroma-js": "^1.4.0",
-    "lodash": "^4.17.11"
-  }
-}

@@ -1,0 +1,11 @@
+{
+  "title": "Rítmo 1",
+  "lnglat": [69.34511599999996, 30.375321],
+  "audio": {
+    "beats": 1,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(106,89,98)"
+  }
+}

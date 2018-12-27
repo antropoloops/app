@@ -1,55 +1,80 @@
-/**
- * A sampler
- */
+import ctx from "./context";
+import {
+  stopAudioClip,
+  startAudioClip,
+  setAudioStatus
+} from "../session/actions";
+import nextBeat from "./nextBeat";
+
 export default class Sampler {
-  constructor(context, trackIds, buffers = {}) {
-    this.context = context;
-    this.buffers = buffers;
-    this.output = gain(0.7, context, context.destination);
-    this.tracks = trackIds.reduce((tracks, trackId) => {
-      tracks[trackId] = { trackId, output: gain(1, context, this.output) };
-
-      return tracks;
-    }, {});
+  constructor(audioset, dispatch) {
+    this.bpm = audioset.audio.bpm || 120;
+    this.playing = 0;
+    this.startedAt = null;
+    this.audioset = audioset;
+    this.buffers = {};
+    this.sources = {};
+    this.dispatch = dispatch;
+    this.output = createMasterOutput(0.2);
   }
 
-  setBuffers(buffers) {
-    this.buffers = buffers;
-  }
+  play(name, time) {
+    time = time || nextBeat(ctx.currentTime, this.startedAt, this.bpm);
+    const buffer = this.buffers[name];
+    if (!buffer) console.warn("No buffer", name);
 
-  start(clipId, trackId, when) {
-    const { context, output, tracks, buffers } = this;
-    const buffer = buffers[clipId];
-    if (!buffer) return console.warn(`No buffer for ${clipId}`);
-
-    const source = context.createBufferSource();
+    this.stopTrack(name, time);
+    const source = (this.sources[name] = ctx.createBufferSource());
     source.buffer = buffer;
-    source.connect(output);
     source.loop = true;
-
-    when = when || context.currentTime;
-    this.stop(undefined, trackId, when);
-    source.start(when);
-
-    tracks[trackId].stop = function stop(when) {
-      source.stop(when);
-    };
+    source.connect(this.output);
+    source.start(time);
+    this.started(name, time);
+  }
+  stop(name, time) {
+    time = time || ctx.currentTime;
+    const source = this.sources[name];
+    if (!source) return;
+    source.stop(time);
+    this.sources[name] = null;
+    this.stopped(name, time);
   }
 
-  stop(clipId, trackId) {
-    const track = this.tracks[trackId];
-    if (track) {
-      track.stop && track.stop();
-      track.stop = undefined;
-    } else {
-      console.log(`No track for ${trackId}`);
+  // stops the clips in the same track
+  stopTrack(name, time) {
+    const clip = this.audioset.clips[name];
+    const track = this.audioset.tracks.find(track => track.name === clip.track);
+    console.log("track!", track);
+    track.clips.forEach(name => this.stop(name, time));
+  }
+
+  stopAll() {
+    const now = ctx.currentTime;
+    Object.keys(this.sources).forEach(name => this.stop(name, now));
+  }
+
+  started(name, time) {
+    if (this.playing === 0) {
+      this.startedAt = time;
+      this.dispatch(setAudioStatus(true, time));
+    }
+    this.playing++;
+    this.dispatch(startAudioClip(name, ctx.currentTime));
+  }
+
+  stopped(name, time) {
+    this.dispatch(stopAudioClip(name, ctx.currentTime));
+    this.playing--;
+    if (this.playing === 0) {
+      this.startedAt = null;
+      this.dispatch(setAudioStatus(false, time));
     }
   }
 }
 
-function gain(gain, context, output) {
-  const out = context.createGain();
-  out.gain.value = gain;
-  out.connect(output);
-  return out;
+function createMasterOutput(gain) {
+  const output = ctx.createGain();
+  output.gain.value = gain;
+  output.connect(ctx.destination);
+  return output;
 }

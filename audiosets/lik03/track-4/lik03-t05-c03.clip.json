@@ -1,0 +1,16 @@
+{
+  "title": "Cascada",
+  "album": "La harpe indienne",
+  "artist": "Sergio Cuevas",
+  "year": 1969,
+  "country": "Paraguay",
+  "lnglat": [-58.443832, -23.442503],
+  "audio": {
+    "position": 3,
+    "beats": 8,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(34,94,96)"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Los Reyes Magos",
+  "album": "Traditional Music of Peru, Vol. 4",
+  "artist": "People at lambayeque",
+  "year": 1991,
+  "country": "Peru",
+  "lnglat": [-75.015152, -9.189967],
+  "audio": {
+    "position": 5,
+    "beats": 12,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(195,99,94)"
+  }
+}

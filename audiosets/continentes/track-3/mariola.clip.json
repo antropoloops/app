@@ -1,0 +1,14 @@
+{
+  "title": "SikoMariola-StaOpMariola",
+  "album": "MIROLOI muziek uit Epirus - klarinet ea vpro ew9305",
+  "year": "1993",
+  "country": "Grecia",
+  "lnglat": [21.824311999999964, 39.074208],
+  "audio": {
+    "beats": 32,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(106,64,97)"
+  }
+}

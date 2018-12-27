@@ -5,14 +5,17 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "dev": "DEBUG=atpls:*,socket.io* nodemon src/index.js",
     "deploy": "now"
   },
   "dependencies": {
+    "lodash": "^4.17.11",
     "micro": "^9.3.3",
+    "nanoid": "^2.0.0",
     "socket.io": "^2.1.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.4"
+    "debug": "^4.1.0",
+    "nodemon": "^1.18.7"
   }
 }

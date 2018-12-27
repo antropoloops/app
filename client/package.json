@@ -1,8 +1,31 @@
 {
-  "name": "webapp",
+  "name": "client2",
   "version": "0.1.0",
   "private": true,
+  "dependencies": {
+    "audio-context": "^1.0.3",
+    "chroma-js": "^2.0.2",
+    "cxs": "^6.2.0",
+    "d3": "^5.7.0",
+    "d3-geo-projection": "^2.5.0",
+    "hsv-rgb": "^1.0.0",
+    "image-promise": "^5.0.1",
+    "lodash": "^4.17.11",
+    "nanobus": "^4.4.0",
+    "prop-types": "^15.6.1",
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2",
+    "react-modal": "^3.8.1",
+    "react-redux": "^6.0.0",
+    "react-scripts": "^2.1.2",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "screenfull": "^4.0.0",
+    "socket.io-client": "^2.2.0",
+    "topojson": "^3.0.2"
+  },
   "scripts": {
+    "dev": "react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -16,23 +39,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "dependencies": {
-    "audio-context": "^1.0.3",
-    "classcat": "^3.2.3",
-    "lodash": "^4.17.11",
-    "material-ui": "^0.20.2",
-    "nanobus": "^4.3.4",
-    "prop-types": "^15.6.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.4",
-    "react-tap-event-plugin": "^3.0.3",
-    "redux": "^4.0.0",
-    "redux-thunk": "^2.3.0",
-    "socket.io-client": "^2.1.1",
-    "styled-components": "^3.4.9"
-  }
+  ]
 }

@@ -1,0 +1,14 @@
+{
+  "title": "Stack O Lee Blues",
+  "album": "78 rpm varios",
+  "year": "1928",
+  "country": "78 rpm",
+  "lnglat": [-89.39852830000001, 32.3546679],
+  "audio": {
+    "beats": 20,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(26,93,92)"
+  }
+}

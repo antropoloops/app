@@ -1,0 +1,16 @@
+{
+  "title": "Ajé!",
+  "album": "Venezuela: Songs and Drums Of The Black Brotherhoods",
+  "artist": "Tambores Chimbangueles De San Benito",
+  "year": 1993,
+  "country": "Venezuela",
+  "lnglat": [-66.58973, 6.42375],
+  "audio": {
+    "position": 3,
+    "beats": 4,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(26,93,92)"
+  }
+}

@@ -1,3 +1,34 @@
 {
-  "private": true
+  "name": "@atpls/application",
+  "private": true,
+  "scripts": {
+    "setup": "npm i & (cd client && npm i) && (cd server & npm i)",
+    "start": "npm run start:client",
+    "start:client": "cd client && npm start",
+    "start:server": "cd client && npm start",
+    "build": "node scripts/build.js",
+    "download": "node scripts/download",
+    "format": "prettier --write \"*/{src,scripts}/**/*.js?(x)\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "chroma-js": "^1.4.0",
+    "lodash": "^4.17.11",
+    "node-wget": "^0.4.3"
+  },
+  "devDependencies": {
+    "husky": "^1.2.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3"
+  }
 }

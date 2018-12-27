@@ -1,15 +1,12 @@
-import Session from "./Session";
+import { events } from "./events";
+import createStore from "./createStore";
 
-let session = null;
+let store = null;
 
-export function createSession(url, websockets) {
-  console.log("NEW SESSION!");
-  if (session) throw Error("Can't create a session twice");
-  session = new Session(url, websockets);
-  return session;
+export function init(initialState) {
+  if (store) throw Error("Session only can be initialized once");
+  store = createStore(initialState);
+  return { events, store };
 }
 
-export function getSession() {
-  if (!session) throw Error("No session!");
-  return session;
-}
+export default { init, events };

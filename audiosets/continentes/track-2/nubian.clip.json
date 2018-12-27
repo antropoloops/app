@@ -1,0 +1,14 @@
+{
+  "title": "Nubian Rhythms",
+  "album": "Music of the Nubians; Aswan; Egypt",
+  "year": "1998",
+  "country": "Egipto",
+  "lnglat": [30.802498000000014, 26.820553],
+  "audio": {
+    "beats": 4,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(337,99,90)"
+  }
+}

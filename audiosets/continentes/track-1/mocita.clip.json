@@ -1,0 +1,14 @@
+{
+  "title": "De una mocita. Bulerias",
+  "album": "Por Derecho",
+  "year": "1975",
+  "country": "España",
+  "lnglat": [-3.7492200000000366, 40.46366700000001],
+  "audio": {
+    "beats": 6,
+    "volume": 0.7
+  },
+  "display": {
+    "color": "hsv(301,56,94)"
+  }
+}
