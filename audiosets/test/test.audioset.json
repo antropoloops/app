@@ -5,11 +5,14 @@
     "title": "Test",
     "description": "Set de prueba de Antropoloops"
   },
-  "loader": {
-    "sources": {
-      "audio": [
-        "https://antropoloops.github.io/audiosets/test/{{filename}}.wav"
-      ]
+  "resources": {
+    "default": {
+      "audio": "https://antropoloops.github.io/audiosets/test/audio/{{filename}}.mp3",
+      "covers": "https://antropoloops.github.io/audiosets/test/covers/{{filename}}.jpg"
+    },
+    "development": {
+      "audio": "/tmp/test/audio/{{filename}}.mp3",
+      "covers": "/tmp/test/covers/{{filename}}.jpg"
     }
   },
   "audio": {
@@ -27,31 +30,31 @@
     },
     "keyMap": {
       "q": {
-        "sample": "voice1"
+        "clipId": "voice1"
       },
       "w": {
-        "sample": "rhythm1"
+        "clipId": "rhythm1"
       },
       "e": {
-        "sample": "accomp1"
+        "clipId": "accomp1"
       },
       "r": {
-        "sample": "melody1"
+        "clipId": "melody1"
       },
       "a": {
-        "sample": "voice2"
+        "clipId": "voice2"
       },
       "s": {
-        "sample": "rhythm2"
+        "clipId": "rhythm2"
       },
       "d": {
-        "sample": "accomp2"
+        "clipId": "accomp2"
       },
       "f": {
-        "sample": "melody2"
+        "clipId": "melody2"
       },
       "z": {
-        "sample": "voice3"
+        "clipId": "voice3"
       }
     }
   }

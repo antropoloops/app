@@ -5,7 +5,7 @@ import Pad from "./Pad";
 
 const TrackPads = ({ track, status, onPadPressed, onPadReleased }) => (
   <div>
-    {track.clips.map(name => (
+    {track.clipIds.map(name => (
       <Pad
         key={name}
         name={name}

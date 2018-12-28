@@ -1,7 +1,8 @@
 {
-  "name": "client2",
-  "version": "0.1.0",
+  "name": "@atpls/client",
   "private": true,
+  "version": "0.2.0",
+  "homepage": "https://antropoloops.github.io/app/",
   "dependencies": {
     "audio-context": "^1.0.3",
     "chroma-js": "^2.0.2",
@@ -15,6 +16,7 @@
     "prop-types": "^15.6.1",
     "react": "16.7.0-alpha.2",
     "react-dom": "16.7.0-alpha.2",
+    "react-input-range": "^1.3.0",
     "react-modal": "^3.8.1",
     "react-redux": "^6.0.0",
     "react-scripts": "^2.1.2",

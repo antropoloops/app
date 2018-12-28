@@ -17,8 +17,6 @@ export default function getAlbumInfo(audioset, name) {
 
   const imageUrl = getClipCoverImageUrl(audioset, clip.name);
   const bpm = audioset.meta.bpm || 120;
-  const trackNames = audioset.tracks.map(t => t.name);
-  console.log("trackNames", trackNames);
 
   return {
     lnglat: clip.lnglat,
@@ -27,7 +25,7 @@ export default function getAlbumInfo(audioset, name) {
     title: clip.title,
     artist: clip.artist,
     album: clip.album,
-    trackNumber: trackNames.indexOf(clip.track),
+    trackNumber: clip.trackNum,
     loopend: 1,
     trackVolume: clip.audio.trackVolume || 0.7,
     duration: (60 * clip.audio.beats) / bpm, // clip duration in seconds

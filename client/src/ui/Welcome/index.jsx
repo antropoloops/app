@@ -1,36 +1,45 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import Welcome from "./Welcome";
-import { fetchIndex, loadAudioset } from "../../audioset";
+import { fetchIndex, fetchAudioset } from "../../audioset";
 import { setAudioset } from "../../session/actions";
 
-const WelcomeState = ({ audioset, dispatch, onClose }) => {
+const WelcomeState = ({ audioset, onClose, onChangeAudioset }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [index, setIndex] = useState(null);
   useEffect(
     () => {
-      fetchIndex().then(index => setIndex(index));
+      let mounted = true;
+      fetchIndex().then(index => mounted && setIndex(index));
+      return () => (mounted = false);
     },
     [audioset]
   );
 
-  const onChangeAudioset = audioset => {
+  const changeAudioset = audioset => {
     setIsLoading(true);
-    loadAudioset(audioset.id)
-      .then(data => dispatch(setAudioset(data)))
+    fetchAudioset(audioset.id)
+      .then(onChangeAudioset)
       .then(onClose);
   };
 
-  const onCloseAudioset = () => dispatch(setAudioset(null));
+  const closeAudioset = () => onChangeAudioset(null);
 
   return (
     <Welcome
       audioset={audioset}
       audiosetIndex={index}
-      onChangeAudioset={onChangeAudioset}
-      onCloseAudioset={onCloseAudioset}
+      onChangeAudioset={changeAudioset}
+      onCloseAudioset={closeAudioset}
     />
   );
 };
 
-export default connect()(WelcomeState);
+const mapStateToProps = state => state;
+const mapDispatchToProps = dispatch => ({
+  onChangeAudioset: audioset => dispatch(setAudioset(audioset))
+});
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(WelcomeState);

@@ -18,52 +18,53 @@ export default class Sampler {
     this.output = createMasterOutput(0.2);
   }
 
-  play(name, time) {
+  play(clipId, time) {
     time = time || nextBeat(ctx.currentTime, this.startedAt, this.bpm);
-    const buffer = this.buffers[name];
-    if (!buffer) console.warn("No buffer", name);
+    const buffer = this.buffers[clipId];
+    if (!buffer) console.warn("No buffer", clipId);
 
-    this.stopTrack(name, time);
-    const source = (this.sources[name] = ctx.createBufferSource());
+    this.stopTrack(clipId, time);
+    const source = (this.sources[clipId] = ctx.createBufferSource());
     source.buffer = buffer;
     source.loop = true;
     source.connect(this.output);
     source.start(time);
-    this.started(name, time);
+    this.started(clipId, time);
   }
-  stop(name, time) {
-    time = time || ctx.currentTime;
-    const source = this.sources[name];
+  stop(clipId, time) {
+    const source = this.sources[clipId];
     if (!source) return;
+    time = time || ctx.currentTime;
     source.stop(time);
-    this.sources[name] = null;
-    this.stopped(name, time);
+    this.sources[clipId] = null;
+    this.stopped(clipId, time);
   }
 
   // stops the clips in the same track
-  stopTrack(name, time) {
-    const clip = this.audioset.clips[name];
-    const track = this.audioset.tracks.find(track => track.name === clip.track);
-    console.log("track!", track);
-    track.clips.forEach(name => this.stop(name, time));
+  stopTrack(clipId, time) {
+    const clip = this.audioset.clips[clipId];
+    const track = this.audioset.tracks.find(track => track.id === clip.trackId);
+    track.clipIds.forEach(clipId => this.stop(clipId, time));
   }
 
   stopAll() {
     const now = ctx.currentTime;
-    Object.keys(this.sources).forEach(name => this.stop(name, now));
+    Object.keys(this.sources).forEach(clipId => this.stop(clipId, now));
   }
 
-  started(name, time) {
+  started(clipId, time) {
     if (this.playing === 0) {
       this.startedAt = time;
       this.dispatch(setAudioStatus(true, time));
     }
     this.playing++;
-    this.dispatch(startAudioClip(name, ctx.currentTime));
+    const { trackId } = this.audioset.clips[clipId];
+    this.dispatch(startAudioClip(clipId, trackId, ctx.currentTime));
   }
 
-  stopped(name, time) {
-    this.dispatch(stopAudioClip(name, ctx.currentTime));
+  stopped(clipId, time) {
+    const { trackId } = this.audioset.clips[clipId];
+    this.dispatch(stopAudioClip(clipId, trackId, ctx.currentTime));
     this.playing--;
     if (this.playing === 0) {
       this.startedAt = null;

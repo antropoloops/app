@@ -20,7 +20,7 @@ export function emit(event) {
 }
 
 events.on("*", (type, event) => {
-  console.log("event", type, event);
+  if (type !== "action") console.log("event", type, event);
 });
 
 const middleware = store => next => action => {

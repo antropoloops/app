@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
-import App from "./App";
+import Desktop from "./Desktop";
 
 const mapStateToProps = session => ({
   audioset: session.audioset
 });
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(Desktop);

@@ -4,10 +4,10 @@ const path = require("path");
 
 const mkdir = dir => !fs.existsSync(dir) && fs.mkdirSync(dir);
 
-const NAMES = ["continentes", "lik03"];
+const NAMES = ["continentes", "lik03", "test"];
 
 const rootPath = path.join(__dirname, "..");
-const buildPath = path.join(rootPath, "audiosets/build");
+const buildPath = path.join(rootPath, "client/public/audiosets");
 const tmpPath = path.join(rootPath, "client/public/tmp");
 mkdir(tmpPath);
 
@@ -16,21 +16,24 @@ const audiosets = NAMES.map(name =>
 );
 
 audiosets.forEach(audioset => {
-  const sources = audioset.loader.sources.audio;
-  console.log(audioset.id, sources);
-  const destPath = path.join(tmpPath, audioset.id);
-  mkdir(destPath);
-  const dest = destPath.toString() + "/";
+  const resources = Object.assign({}, audioset.resources.default);
+  console.log(audioset.id, resources);
+  const setPath = path.join(tmpPath, audioset.id);
+  mkdir(setPath);
+  const clipNames = Object.keys(audioset.clips);
 
-  sources.forEach(source => {
-    const clipNames = Object.keys(audioset.clips);
+  Object.keys(resources).forEach(type => {
+    const source = resources[type];
+    const typePath = path.join(setPath, type);
+    mkdir(typePath);
+    const dest = typePath.toString() + "/";
     clipNames.forEach(name => {
-      download(dest, name, source, audioset.clips[name]);
+      download(dest, name, source);
     });
   });
 });
 
-function download(dest, name, source, clip) {
+function download(dest, name, source) {
   const url = source.replace("{{filename}}", name);
   const filename = url.slice(url.lastIndexOf("/") + 1);
   const target = path.join(dest, filename);
@@ -38,6 +41,6 @@ function download(dest, name, source, clip) {
     console.log("Exists (skip)", url);
   } else {
     console.log("Write", target);
-    wget({ url: url, dest });
+    wget({ url, dest });
   }
 }

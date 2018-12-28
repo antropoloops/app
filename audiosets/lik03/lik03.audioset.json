@@ -7,23 +7,16 @@
   },
   "resources": {
     "default": {
+      "audio": "https://antropoloops.github.io/audiosets/lik03/audio/{{filename}}.mp3",
+      "covers": "https://antropoloops.github.io/audiosets/lik03/covers/{{filename}}.jpg"
+    },
+    "google": {
       "audio": "https://storage.googleapis.com/atpls-sets/lik/{{filename}}.mp3",
       "covers": "https://storage.googleapis.com/atpls-sets/lik/lik03-covers/{{filename}}.jpg"
     },
     "development": {
-      "audio": "/tmp/lik03/{{filename}}.wav"
-    }
-  },
-  "loader": {
-    "sources": {
-      "audio": [
-        "https://storage.googleapis.com/atpls-sets/lik/{{filename}}.mp3",
-        "https://storage.googleapis.com/atpls-sets/lik/{{filename}}.wav",
-        "https://antropoloops.github.io/audiosets/lik/{{filename}}.wav"
-      ],
-      "covers": [
-        "https://storage.googleapis.com/atpls-sets/lik/lik03-covers/{{filename}}.jpg"
-      ]
+      "audio": "/tmp/lik03/audio/{{filename}}.wav",
+      "covers": "/tmp/lik03/covers/{{filename}}.jpg"
     }
   },
   "audio": {

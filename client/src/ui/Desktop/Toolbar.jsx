@@ -8,7 +8,10 @@ const Toolbar = ({
   audioset,
   audio,
   onCloseAudioset,
-  onStopAll
+  onStopAll,
+  onTogglePads,
+  onToggleTracks,
+  onFullscreen
 }) => (
   <header className={className}>
     <div>
@@ -21,8 +24,8 @@ const Toolbar = ({
       {audio.isPlaying ? <Icon icon="stop" onClick={onStopAll} /> : ""}
       <Icon icon="mute" />
     </Transport>
-    <Icon icon="controls" />
-    <Icon icon="cinema" />
+    <Icon icon="controls" onClick={onToggleTracks} />
+    <Icon icon="cinema" onClick={onFullscreen} />
   </header>
 );
 Toolbar.propTypes = {

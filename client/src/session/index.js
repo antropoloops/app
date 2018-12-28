@@ -6,7 +6,10 @@ let store = null;
 export function init(initialState) {
   if (store) throw Error("Session only can be initialized once");
   store = createStore(initialState);
-  return { events, store };
+
+  const dispatch = store.dispatch;
+  const getAudioset = () => store.getState().audioset;
+  return { events, store, getAudioset, dispatch };
 }
 
 export default { init, events };

@@ -1,32 +1,9 @@
 import React from "react";
-import cxs from "cxs/component";
+import cxs from "cxs";
 import PropTypes from "prop-types";
-import { Link } from "../shared";
+import { Link, Button } from "../shared";
 
-const Welcome = ({
-  className,
-  audiosetIndex,
-  onChangeAudioset,
-  onCloseAudioset
-}) => (
-  <div className={className}>
-    {audiosetIndex && (
-      <>
-        <h2>Empieza una nueva remezcla</h2>
-        {audiosetIndex.map(set => (
-          <Link key={set.id} onClick={() => onChangeAudioset(set)}>
-            {set.meta.title}: {set.meta.description}
-          </Link>
-        ))}
-        <Link onClick={onCloseAudioset}>Cerrar audioset</Link>
-      </>
-    )}
-  </div>
-);
-Welcome.propTypes = {};
-
-export default cxs(Welcome)({
-  maxWidth: "40em",
+const className = cxs({
   margin: "0 auto",
   lineHeight: "2em",
   fontSize: "14px",
@@ -36,3 +13,36 @@ export default cxs(Welcome)({
     margin: "1em 0"
   }
 });
+
+const Welcome = ({
+  audioset,
+  audiosetIndex,
+  onChangeAudioset,
+  onCloseAudioset
+}) => (
+  <div className={className}>
+    {audiosetIndex && !audioset && (
+      <>
+        <h2>Empieza una nueva remezcla</h2>
+        {audiosetIndex.map(set => (
+          <Link key={set.id} onClick={() => onChangeAudioset(set)}>
+            {set.meta.title}: {set.meta.description}
+          </Link>
+        ))}
+      </>
+    )}
+
+    {audioset && (
+      <>
+        <h1>{audioset.meta.title}</h1>
+        <p>{audioset.meta.description}</p>
+        <Button onClick={onCloseAudioset}>Cerrar audioset</Button>
+      </>
+    )}
+  </div>
+);
+Welcome.propTypes = {
+  onChangeAudioset: PropTypes.func
+};
+
+export default Welcome;

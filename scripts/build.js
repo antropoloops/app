@@ -51,7 +51,7 @@ function buildClips(files) {
     const [set, track, fileName] = file;
     const [name] = fileName.split(".");
     const clipPath = path.join(SOURCE, set, track, fileName);
-    const seed = { name, track };
+    const seed = { name, trackId: track };
     const data = readJson(clipPath);
     // name and track first, but overwritte
     const clip = Object.assign(seed, data, seed);

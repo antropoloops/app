@@ -1,43 +1,20 @@
 import React from "react";
 import cxs from "cxs/component";
 import PropTypes from "prop-types";
-
-const Trigger = ({ onPress, onRelease, className, children }) => (
-  <button className={className} onMouseDown={onPress} onMouseUp={onRelease}>
-    {children}
-  </button>
-);
+import { getKeyboardMap } from "../../audioset/inputs";
+import Trigger from "../shared/Trigger";
 
 const Key = cxs(Trigger)(props => ({
-  border: `1px solid ${props.color}`,
-  color: props.color,
-  backgroundColor: "black",
   marginRight: "0.5em",
-  padding: "1px 3px",
-  "&:hover": {
-    backgroundColor: props.color,
-    color: "black"
-  }
+  padding: "1px 3px"
 }));
 
-function buildKeymap(keyboard) {
-  if (!keyboard) return {};
-  const { defaults, keyMap } = keyboard;
-  return Object.keys(keyMap).reduce((map, key) => {
-    const value = { ...defaults, ...keyMap[key] };
-    value.key = key;
-    map[key] = value;
-    map[value.sample] = value;
-    return map;
-  }, {});
-}
-
 const Keyboard = ({ audioset, status, className, onPress, onRelease }) => {
-  const keyMap = buildKeymap(audioset.keyboard);
+  const keyMap = getKeyboardMap(audioset);
   return (
     <div className={className}>
       {audioset.tracks.map(track =>
-        track.clips.map(name => (
+        track.clipIds.map(name => (
           <Key
             key={name}
             pressed={status[name] && status[name].isPlaying}

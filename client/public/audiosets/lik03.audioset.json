@@ -7,23 +7,16 @@
   },
   "resources": {
     "default": {
+      "audio": "https://antropoloops.github.io/audiosets/lik03/audio/{{filename}}.mp3",
+      "covers": "https://antropoloops.github.io/audiosets/lik03/covers/{{filename}}.jpg"
+    },
+    "google": {
       "audio": "https://storage.googleapis.com/atpls-sets/lik/{{filename}}.mp3",
       "covers": "https://storage.googleapis.com/atpls-sets/lik/lik03-covers/{{filename}}.jpg"
     },
     "development": {
-      "audio": "/tmp/lik03/{{filename}}.wav"
-    }
-  },
-  "loader": {
-    "sources": {
-      "audio": [
-        "https://storage.googleapis.com/atpls-sets/lik/{{filename}}.mp3",
-        "https://storage.googleapis.com/atpls-sets/lik/{{filename}}.wav",
-        "https://antropoloops.github.io/audiosets/lik/{{filename}}.wav"
-      ],
-      "covers": [
-        "https://storage.googleapis.com/atpls-sets/lik/lik03-covers/{{filename}}.jpg"
-      ]
+      "audio": "/tmp/lik03/audio/{{filename}}.wav",
+      "covers": "/tmp/lik03/covers/{{filename}}.jpg"
     }
   },
   "audio": {
@@ -53,7 +46,7 @@
   "clips": {
     "lik03-t01-c01": {
       "name": "lik03-t01-c01",
-      "track": "guitarras",
+      "trackId": "track01",
       "title": "Carvana indigena",
       "album": "Sortilege de la flute equatorienne",
       "artist": "Los Corazas, Carlos Bonilla, Gonzalo Castro",
@@ -66,13 +59,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#52fd38"
+        "color": "#4bff27"
       },
-      "trackId": 0
+      "trackNum": 0
     },
     "lik03-t01-c02": {
       "name": "lik03-t01-c02",
-      "track": "guitarras",
+      "trackId": "track01",
       "title": "Carvana indigena",
       "album": "Sortilege de la flute equatorienne",
       "artist": "Los Corazas, Carlos Bonilla, Gonzalo Castro",
@@ -85,13 +78,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#5cfd38"
+        "color": "#4bff27"
       },
-      "trackId": 0
+      "trackNum": 0
     },
     "lik03-t01-c03": {
       "name": "lik03-t01-c03",
-      "track": "guitarras",
+      "trackId": "track01",
       "title": "Carvana indigena",
       "album": "Sortilege de la flute equatorienne",
       "artist": "Los Corazas, Carlos Bonilla, Gonzalo Castro",
@@ -104,13 +97,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#66fd38"
+        "color": "#4bff27"
       },
-      "trackId": 0
+      "trackNum": 0
     },
     "lik03-t01-c04": {
       "name": "lik03-t01-c04",
-      "track": "guitarras",
+      "trackId": "track01",
       "title": "Carvana indigena",
       "album": "Sortilege de la flute equatorienne",
       "artist": "Los Corazas, Carlos Bonilla, Gonzalo Castro",
@@ -123,70 +116,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#42fd38"
+        "color": "#4bff27"
       },
-      "trackId": 0
-    },
-    "lik03-t03-c01": {
-      "name": "lik03-t03-c01",
-      "track": "percusion",
-      "title": "Mistura No. 4",
-      "album": "Batucada Genial",
-      "artist": "Mester Geraldo e Sua Bateria",
-      "year": 1977,
-      "country": "Brasil",
-      "lnglat": [-51.92528, -14.235004],
-      "audio": {
-        "position": 1,
-        "beats": 4,
-        "volume": 0.7
-      },
-      "display": {
-        "color": "#38fda1"
-      },
-      "trackId": 1
-    },
-    "lik03-t03-c02": {
-      "name": "lik03-t03-c02",
-      "track": "percusion",
-      "title": "Baila Rosita",
-      "album": "A Orillas del Magdalena",
-      "artist": "Los Guacharacos",
-      "year": 2009,
-      "country": "Colombia",
-      "lnglat": [-74.297333, 4.570868],
-      "audio": {
-        "position": 2,
-        "beats": 8,
-        "volume": 0.7
-      },
-      "display": {
-        "color": "#38fdb5"
-      },
-      "trackId": 1
-    },
-    "lik03-t03-c03": {
-      "name": "lik03-t03-c03",
-      "track": "percusion",
-      "title": "Borregos. Tonada del rabudo",
-      "album": "Traditional Music of Peru, Vol. 8. Piura",
-      "artist": "Banda Hermanos Dedios Zapata",
-      "year": 1994,
-      "country": "Peru",
-      "lnglat": [-75.015152, -9.189967],
-      "audio": {
-        "position": 3,
-        "beats": 2,
-        "volume": 0.7
-      },
-      "display": {
-        "color": "#38fd8d"
-      },
-      "trackId": 1
+      "trackNum": 0
     },
     "lik03-t02-c01": {
       "name": "lik03-t02-c01",
-      "track": "track-1",
+      "trackId": "track02",
       "title": "Som coiman",
       "album": "La harpe indienne",
       "artist": "Sergio Cuevas",
@@ -199,13 +135,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#fd38df"
+        "color": "#27ffac"
       },
-      "trackId": 2
+      "trackNum": 1
     },
     "lik03-t02-c02": {
       "name": "lik03-t02-c02",
-      "track": "track-1",
+      "trackId": "track02",
       "title": "Carvana indigena",
       "album": "Sortilege de la flute equatorienne",
       "artist": "Los Corazas, Carlos Bonilla, Gonzalo Castro",
@@ -218,13 +154,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#fd38e3"
+        "color": "#27ffac"
       },
-      "trackId": 2
+      "trackNum": 1
     },
     "lik03-t02-c03": {
       "name": "lik03-t02-c03",
-      "track": "track-1",
+      "trackId": "track02",
       "title": "Ajé!",
       "album": "Venezuela: Songs and Drums Of The Black Brotherhoods",
       "artist": "Tambores Chimbangueles De San Benito",
@@ -237,13 +173,70 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#fd38ec"
+        "color": "#27ffac"
       },
-      "trackId": 2
+      "trackNum": 1
+    },
+    "lik03-t03-c01": {
+      "name": "lik03-t03-c01",
+      "trackId": "track03",
+      "title": "Mistura No. 4",
+      "album": "Batucada Genial",
+      "artist": "Mester Geraldo e Sua Bateria",
+      "year": 1977,
+      "country": "Brasil",
+      "lnglat": [-51.92528, -14.235004],
+      "audio": {
+        "position": 1,
+        "beats": 4,
+        "volume": 0.7
+      },
+      "display": {
+        "color": "#ff27f7"
+      },
+      "trackNum": 2
+    },
+    "lik03-t03-c02": {
+      "name": "lik03-t03-c02",
+      "trackId": "track03",
+      "title": "Baila Rosita",
+      "album": "A Orillas del Magdalena",
+      "artist": "Los Guacharacos",
+      "year": 2009,
+      "country": "Colombia",
+      "lnglat": [-74.297333, 4.570868],
+      "audio": {
+        "position": 2,
+        "beats": 8,
+        "volume": 0.7
+      },
+      "display": {
+        "color": "#ff27f7"
+      },
+      "trackNum": 2
+    },
+    "lik03-t03-c03": {
+      "name": "lik03-t03-c03",
+      "trackId": "track03",
+      "title": "Borregos. Tonada del rabudo",
+      "album": "Traditional Music of Peru, Vol. 8. Piura",
+      "artist": "Banda Hermanos Dedios Zapata",
+      "year": 1994,
+      "country": "Peru",
+      "lnglat": [-75.015152, -9.189967],
+      "audio": {
+        "position": 3,
+        "beats": 2,
+        "volume": 0.7
+      },
+      "display": {
+        "color": "#ff27f7"
+      },
+      "trackNum": 2
     },
     "lik03-t04-c01": {
       "name": "lik03-t04-c01",
-      "track": "track-3",
+      "trackId": "track04",
       "title": "Chico chora",
       "album": "Partido alto nota 10",
       "artist": "Bezerra & Genaro Da Silva",
@@ -256,13 +249,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#fd3887"
+        "color": "#ff2772"
       },
-      "trackId": 3
+      "trackNum": 3
     },
     "lik03-t04-c02": {
       "name": "lik03-t04-c02",
-      "track": "track-3",
+      "trackId": "track04",
       "title": "Congo-Angola for dadalunda",
       "album": "Afro-bahian religious songs",
       "artist": "Varios",
@@ -275,13 +268,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#fd387d"
+        "color": "#ff2772"
       },
-      "trackId": 3
+      "trackNum": 3
     },
     "lik03-t05-c01": {
       "name": "lik03-t05-c01",
-      "track": "track-4",
+      "trackId": "track05",
       "title": "Toque de capoeira de Sao Bento Grande",
       "album": "Academia de capoeira de Angola. Sao Jorge dos irmaos unidos de mestre Caicara",
       "artist": "Academia de capoeira de Angola",
@@ -294,13 +287,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#38c2fd"
+        "color": "#27b7ff"
       },
-      "trackId": 4
+      "trackNum": 4
     },
     "lik03-t05-c02": {
       "name": "lik03-t05-c02",
-      "track": "track-4",
+      "trackId": "track05",
       "title": "Cascada",
       "album": "La harpe indienne",
       "artist": "Sergio Cuevas",
@@ -313,13 +306,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#38b2fd"
+        "color": "#27b7ff"
       },
-      "trackId": 4
+      "trackNum": 4
     },
     "lik03-t05-c03": {
       "name": "lik03-t05-c03",
-      "track": "track-4",
+      "trackId": "track05",
       "title": "Cascada",
       "album": "La harpe indienne",
       "artist": "Sergio Cuevas",
@@ -332,13 +325,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#38c8fd"
+        "color": "#27b7ff"
       },
-      "trackId": 4
+      "trackNum": 4
     },
     "lik03-t06-c01": {
       "name": "lik03-t06-c01",
-      "track": "track-5",
+      "trackId": "track06",
       "title": "Song accompanied with pantomime of the bird called choyke : Love Song",
       "album": "Ameridian Music of Chile. Aymara, Qaqashqar, Mapuche",
       "artist": "Mapuche",
@@ -351,13 +344,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#387dfd"
+        "color": "#276bff"
       },
-      "trackId": 5
+      "trackNum": 5
     },
     "lik03-t06-c02": {
       "name": "lik03-t06-c02",
-      "track": "track-5",
+      "trackId": "track06",
       "title": "Qanchi Alcalde",
       "album": "Traditional Music of Peru, Vol. 1. Festivals of Cusco",
       "artist": "Conjunto of Cusco",
@@ -370,13 +363,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#3873fd"
+        "color": "#276bff"
       },
-      "trackId": 5
+      "trackNum": 5
     },
     "lik03-t06-c03": {
       "name": "lik03-t06-c03",
-      "track": "track-5",
+      "trackId": "track06",
       "title": "Narrative Song",
       "album": "Lowland Tribes of Ecuador",
       "artist": "Waorani people (Huarani)",
@@ -389,13 +382,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#3894fd"
+        "color": "#276bff"
       },
-      "trackId": 5
+      "trackNum": 5
     },
     "lik03-t07-c01": {
       "name": "lik03-t07-c01",
-      "track": "track-6",
+      "trackId": "track07",
       "title": "Exu (part 2)",
       "album": "Amazônia · Cult Music Of Northern Brazil",
       "artist": "Closing song of a ritual cycle in the batuque houses",
@@ -408,13 +401,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#fdb838"
+        "color": "#ffa127"
       },
-      "trackId": 6
+      "trackNum": 6
     },
     "lik03-t07-c02": {
       "name": "lik03-t07-c02",
-      "track": "track-6",
+      "trackId": "track07",
       "title": "Ae cho ko noye oh",
       "album": "Music of the Coastal Amerindians of Guyana. The Arawak, Carib and Warrau",
       "artist": "Shaman Joseph Miguel",
@@ -427,13 +420,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#fdae38"
+        "color": "#ffa127"
       },
-      "trackId": 6
+      "trackNum": 6
     },
     "lik03-t07-c03": {
       "name": "lik03-t07-c03",
-      "track": "track-6",
+      "trackId": "track07",
       "title": "Heitor Villa Lobos habla de la música Brasileña",
       "album": "BENIN & BRESIL. CORREA DE AZEVEDO,L.H.",
       "artist": "Heitor Villa Lobos",
@@ -446,13 +439,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#fdae38"
+        "color": "#ffa127"
       },
-      "trackId": 6
+      "trackNum": 6
     },
     "lik03-t07-c04": {
       "name": "lik03-t07-c04",
-      "track": "track-6",
+      "trackId": "track07",
       "title": "Diablada",
       "album": "Flute indienne",
       "artist": "Varios",
@@ -465,13 +458,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#fd9138"
+        "color": "#ffa127"
       },
-      "trackId": 6
+      "trackNum": 6
     },
     "lik03-t07-c05": {
       "name": "lik03-t07-c05",
-      "track": "track-6",
+      "trackId": "track07",
       "title": "Los Reyes Magos",
       "album": "Traditional Music of Peru, Vol. 4",
       "artist": "People at lambayeque",
@@ -484,13 +477,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#fd9138"
+        "color": "#ffa127"
       },
-      "trackId": 6
+      "trackNum": 6
     },
     "lik03-t08-c01": {
       "name": "lik03-t08-c01",
-      "track": "track-7",
+      "trackId": "track08",
       "title": "Heitor Villa Lobos habla de la música Brasileña",
       "album": "BENIN & BRESIL. CORREA DE AZEVEDO,L.H.",
       "artist": "Heitor Villa Lobos",
@@ -503,13 +496,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#fdf338"
+        "color": "#ffe927"
       },
-      "trackId": 7
+      "trackNum": 7
     },
     "lik03-t08-c02": {
       "name": "lik03-t08-c02",
-      "track": "track-7",
+      "trackId": "track08",
       "title": "Heitor Villa Lobos habla de la música Brasileña",
       "album": "BENIN & BRESIL. CORREA DE AZEVEDO,L.H.",
       "artist": "Heitor Villa Lobos",
@@ -522,13 +515,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#f6fd38"
+        "color": "#ffe927"
       },
-      "trackId": 7
+      "trackNum": 7
     },
     "lik03-t08-c03": {
       "name": "lik03-t08-c03",
-      "track": "track-7",
+      "trackId": "track08",
       "title": "Chant pour un Orisha, divinité yorouba",
       "album": "Brésil (Salvador de Bahia) et Bénin ; Verger, Pierre (1965-1990 ?)",
       "artist": "Afro-Brasileños",
@@ -541,13 +534,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#fde638"
+        "color": "#ffe927"
       },
-      "trackId": 7
+      "trackNum": 7
     },
     "lik03-t08-c04": {
       "name": "lik03-t08-c04",
-      "track": "track-7",
+      "trackId": "track08",
       "title": "Tree-Felling Songs (Matjáu baai)",
       "album": "Music from Saramaka. A Dynamic Afro-American Tradition",
       "artist": "Pikílío Man",
@@ -560,13 +553,13 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#fdfd38"
+        "color": "#ffe927"
       },
-      "trackId": 7
+      "trackNum": 7
     },
     "lik03-t08-c05": {
       "name": "lik03-t08-c05",
-      "track": "track-7",
+      "trackId": "track08",
       "title": "Heitor Villa Lobos habla de la música Brasileña",
       "album": "BENIN & BRESIL. CORREA DE AZEVEDO,L.H.",
       "artist": "Heitor Villa Lobos",
@@ -579,76 +572,76 @@
         "volume": 0.7
       },
       "display": {
-        "color": "#fdf338"
+        "color": "#ffe927"
       },
-      "trackId": 7
+      "trackNum": 7
     }
   },
   "tracks": [
     {
-      "name": "guitarras",
-      "clips": [
+      "id": "track01",
+      "clipIds": [
         "lik03-t01-c01",
         "lik03-t01-c02",
         "lik03-t01-c03",
         "lik03-t01-c04"
       ],
-      "id": 0,
-      "color": "#69fd38"
+      "num": 0,
+      "color": "#4bff27"
     },
     {
-      "name": "percusion",
-      "clips": ["lik03-t03-c01", "lik03-t03-c02", "lik03-t03-c03"],
-      "id": 1,
-      "color": "#38fd8a"
+      "id": "track02",
+      "clipIds": ["lik03-t02-c01", "lik03-t02-c02", "lik03-t02-c03"],
+      "num": 1,
+      "color": "#27ffac"
     },
     {
-      "name": "track-1",
-      "clips": ["lik03-t02-c01", "lik03-t02-c02", "lik03-t02-c03"],
-      "id": 2,
-      "color": "#fd38f0"
+      "id": "track03",
+      "clipIds": ["lik03-t03-c01", "lik03-t03-c02", "lik03-t03-c03"],
+      "num": 2,
+      "color": "#ff27f7"
     },
     {
-      "name": "track-3",
-      "clips": ["lik03-t04-c01", "lik03-t04-c02"],
-      "id": 3,
-      "color": "#fd3873"
+      "id": "track04",
+      "clipIds": ["lik03-t04-c01", "lik03-t04-c02"],
+      "num": 3,
+      "color": "#ff2772"
     },
     {
-      "name": "track-4",
-      "clips": ["lik03-t05-c01", "lik03-t05-c02", "lik03-t05-c03"],
-      "id": 4,
-      "color": "#38c5fd"
+      "id": "track05",
+      "clipIds": ["lik03-t05-c01", "lik03-t05-c02", "lik03-t05-c03"],
+      "num": 4,
+      "color": "#27b7ff"
     },
     {
-      "name": "track-5",
-      "clips": ["lik03-t06-c01", "lik03-t06-c02", "lik03-t06-c03"],
-      "id": 5,
-      "color": "#3887fd"
+      "id": "track06",
+      "clipIds": ["lik03-t06-c01", "lik03-t06-c02", "lik03-t06-c03"],
+      "num": 5,
+      "color": "#276bff"
     },
     {
-      "name": "track-6",
-      "clips": [
+      "id": "track07",
+      "clipIds": [
         "lik03-t07-c01",
         "lik03-t07-c02",
         "lik03-t07-c03",
         "lik03-t07-c04",
         "lik03-t07-c05"
       ],
-      "id": 6,
-      "color": "#fd9738"
+      "num": 6,
+      "color": "#ffa127"
     },
     {
-      "name": "track-7",
-      "clips": [
+      "id": "track08",
+      "clipIds": [
         "lik03-t08-c01",
         "lik03-t08-c02",
         "lik03-t08-c03",
         "lik03-t08-c04",
         "lik03-t08-c05"
       ],
-      "id": 7,
-      "color": "#fddf38"
+      "num": 7,
+      "color": "#ffe927"
     }
   ]
 }

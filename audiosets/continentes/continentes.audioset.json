@@ -7,25 +7,19 @@
   },
   "resources": {
     "default": {
+      "audio": "https://antropoloops.github.io/audiosets/continentes/audio/{{filename}}.mp3",
+      "covers": "https://antropoloops.github.io/audiosets/continentes/covers/{{filename}}.jpg"
+    },
+    "google": {
       "audio": "https://storage.googleapis.com/atpls-sets/continentes/{{filename}}.mp3",
       "covers": "https://storage.googleapis.com/atpls-sets/continentes/{{filename}}.jpg"
     },
     "development": {
-      "audio": "/tmp/continentes/{{filename}}.wav",
-      "covers": "https://storage.googleapis.com/atpls-sets/continentes/{{filename}}.jpg"
+      "audio": "/tmp/continentes/audio/{{filename}}.wav",
+      "covers": "/tmp/continentes/covers/{{filename}}.jpg"
     },
     "github": {
       "audio": "https://antropoloops.github.io/audiosets/continentes/{{filename}}.wav"
-    }
-  },
-  "loader": {
-    "sources": {
-      "audio": [
-        "https://antropoloops.github.io/audiosets/continentes/{{filename}}.wav"
-      ],
-      "covers": [
-        "https://storage.googleapis.com/atpls-sets/continentes/{{filename}}.jpg"
-      ]
     }
   },
   "audio": {
@@ -57,64 +51,64 @@
     },
     "keyMap": {
       "q": {
-        "sample": "ossie",
+        "clipId": "ossie",
         "type": "toggle"
       },
       "a": {
-        "sample": "orillas"
+        "clipId": "orillas"
       },
       "z": {
-        "sample": "mocita"
+        "clipId": "mocita"
       },
       "w": {
-        "sample": "nubian",
+        "clipId": "nubian",
         "type": "toggle"
       },
       "s": {
-        "sample": "tabla"
+        "clipId": "tabla"
       },
       "x": {
-        "sample": "pae"
+        "clipId": "pae"
       },
       "e": {
-        "sample": "mississipi",
+        "clipId": "mississipi",
         "type": "toggle"
       },
       "d": {
-        "sample": "camino"
+        "clipId": "camino"
       },
       "c": {
-        "sample": "mariola"
+        "clipId": "mariola"
       },
       "r": {
-        "sample": "madinda",
+        "clipId": "madinda",
         "type": "toggle"
       },
       "f": {
-        "sample": "ballade"
+        "clipId": "ballade"
       },
       "v": {
-        "sample": "funeraire"
+        "clipId": "funeraire"
       },
       "t": {
-        "sample": "ed-lewis",
+        "clipId": "ed-lewis",
         "type": "toggle"
       },
       "g": {
-        "sample": "rueda"
+        "clipId": "rueda"
       },
       "b": {
-        "sample": "agnus-dei"
+        "clipId": "agnus-dei"
       },
       "y": {
-        "sample": "indvumo",
+        "clipId": "indvumo",
         "type": "toggle"
       },
       "h": {
-        "sample": "ogbeler"
+        "clipId": "ogbeler"
       },
       "n": {
-        "sample": "are-are"
+        "clipId": "are-are"
       }
     }
   }
