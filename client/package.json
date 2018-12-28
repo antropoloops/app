@@ -3,6 +3,14 @@
   "private": true,
   "version": "0.2.0",
   "homepage": "https://antropoloops.github.io/app/",
+  "scripts": {
+    "dev": "react-scripts start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "rm -rf ./build/tmp && gh-pages -d build/"
+  },
   "dependencies": {
     "audio-context": "^1.0.3",
     "chroma-js": "^2.0.2",
@@ -26,12 +34,8 @@
     "socket.io-client": "^2.2.0",
     "topojson": "^3.0.2"
   },
-  "scripts": {
-    "dev": "react-scripts start",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   },
   "eslintConfig": {
     "extends": "react-app"
