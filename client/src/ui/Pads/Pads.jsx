@@ -38,6 +38,6 @@ Pads.propTypes = {
 };
 export default cxs(Pads)({
   backgroundColor: "black",
-  minWidth: "30em",
+  padding: "0 0.5em 0 1em",
   minHeight: "100%"
 });

@@ -14,7 +14,6 @@ export const Button = cxs("button")({
   background: "white",
   font: "inherit",
   padding: "0 1em",
-  borderRadius: "1em",
   ":hover": {
     textDecoration: "underline"
   }

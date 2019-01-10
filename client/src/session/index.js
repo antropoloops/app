@@ -1,15 +1,13 @@
-import { events } from "./events";
-import createStore from "./createStore";
+import { combineReducers } from "redux";
+import audioset from "./reducers/audioset";
+import audio from "./reducers/audio";
+import tracks from "./reducers/tracks";
 
-let store = null;
-
-export function init(initialState) {
-  if (store) throw Error("Session only can be initialized once");
-  store = createStore(initialState);
-
-  const dispatch = store.dispatch;
-  const getAudioset = () => store.getState().audioset;
-  return { events, store, getAudioset, dispatch };
-}
-
-export default { init, events };
+/**
+ * The session stores all state that can be shared between instances connected
+ */
+export default combineReducers({
+  audioset,
+  audio,
+  tracks
+});

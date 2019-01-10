@@ -7,6 +7,9 @@ import {
 } from "../session/actions";
 import Resources from "../audioset/resources";
 import Sampler from "./Sampler";
+import { memo } from "../audioset/cache";
+
+export default { effects };
 
 const samplers = {};
 const getSampler = (audioset, dispatch) => {
@@ -17,31 +20,37 @@ const getSampler = (audioset, dispatch) => {
 };
 let currentSampler = null;
 
-// Eventually, we have to do it better
-function restoreState(state, events, store) {
-  store.dispatch(stopAudio());
+function restoreState(session, dispatch) {
+  if (session.audioset) changeSampler(session.audioset, dispatch);
+  // Eventually, we have to do it better
+  dispatch(stopAudio());
 }
 
-export function connect(session) {
-  const { events, store } = session;
-  const state = store.getState();
-  if (state.audioset) setAudioset(state.audioset, store.dispatch);
-
-  restoreState(state, events, store);
-
-  events.on("action", action => {
-    const { type } = action;
-    if (type === SET_AUDIOSET) setAudioset(action.audioset, store.dispatch);
-    else if (type === PRESS_PAD) playSample(action.clipId);
-    else if (type === RELEASE_PAD) stopSample(action.clipId);
-    else if (type === AUDIO_STOP_ALL) currentSampler.stopAll();
-  });
+export function effects({ getSession, dispatch, addEffect }) {
+  const session = getSession();
+  restoreState(session, dispatch);
+  return action => {
+    switch (action.type) {
+      case SET_AUDIOSET:
+        return changeSampler(action.audioset, dispatch);
+      case PRESS_PAD:
+        return playSample(action.clipId);
+      case RELEASE_PAD:
+        return stopSample(action.clipId);
+      case AUDIO_STOP_ALL:
+        return currentSampler.stopAll();
+      default:
+    }
+  };
 }
 
-function setAudioset(audioset, dispatch) {
-  if (!audioset) return;
-  currentSampler = getSampler(audioset, dispatch);
-  currentSampler.buffers = Resources.getCachedResources(audioset, "audio");
+function changeSampler(audioset, dispatch) {
+  if (audioset) {
+    currentSampler = getSampler(audioset, dispatch);
+    currentSampler.buffers = Resources.getCachedResources(audioset, "audio");
+  } else {
+    currentSampler = null;
+  }
 }
 
 function playSample(id, events) {
@@ -52,5 +61,3 @@ function stopSample(id, events) {
   if (!currentSampler) return console.warn("NO sampler!");
   currentSampler.stop(id);
 }
-
-export default { connect };

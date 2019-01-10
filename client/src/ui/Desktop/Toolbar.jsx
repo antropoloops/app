@@ -1,7 +1,7 @@
 import React from "react";
 import cxs from "cxs/component";
 import PropTypes from "prop-types";
-import { Icon } from "../shared";
+import { Icon, Link } from "../shared";
 
 const Toolbar = ({
   className,
@@ -9,21 +9,23 @@ const Toolbar = ({
   audio,
   onCloseAudioset,
   onStopAll,
-  onTogglePads,
+  onHelp,
   onToggleTracks,
+  onTogglePads,
   onFullscreen
 }) => (
   <header className={className}>
     <div>
-      <Icon icon="fly" onClick={onCloseAudioset} />
+      <Icon icon="fly" onClick={onHelp} />
     </div>
-    <Connection>
+    <Connection id="Connection" onClick={onCloseAudioset}>
       {audioset.meta.title}: {audioset.meta.description}
     </Connection>
-    <Transport>
+    <Transport id="Transport">
       {audio.isPlaying ? <Icon icon="stop" onClick={onStopAll} /> : ""}
       <Icon icon="mute" />
     </Transport>
+    <Icon icon="controls" onClick={onTogglePads} />
     <Icon icon="controls" onClick={onToggleTracks} />
     <Icon icon="cinema" onClick={onFullscreen} />
   </header>

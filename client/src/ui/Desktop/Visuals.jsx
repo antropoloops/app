@@ -1,16 +1,16 @@
 import React, { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
-import cxs from "cxs/component";
-import { START_VISUALS, STOP_VISUALS } from "../../session/events";
+import cxs from "cxs";
 
-const Visuals = ({ className, audioset, events }) => {
+const Visuals = ({ audioset, onStart, onStop }) => {
   const el = useRef(null);
   useEffect(
     () => {
-      events.emit(START_VISUALS, { audioset, el: el.current });
-      return () => events.emit(STOP_VISUALS);
+      if (!audioset) return;
+      onStart(audioset, el.current);
+      return () => onStop();
     },
-    [audioset]
+    [el.current]
   );
   return <div className={className} ref={el} />;
 };
@@ -20,7 +20,9 @@ Visuals.propTypes = {
   events: PropTypes.object
 };
 
-export default cxs(Visuals)({
+const className = cxs({
   backgroundColor: "gray",
   height: "100%"
 });
+
+export default Visuals;

@@ -29,25 +29,6 @@ export function getDotOffsetX(screenWidth, trackNumber) {
   return trackNumber * getCoverSize(screenWidth) + DOT_RADIUS;
 }
 
-export function getWindowSize(ratio) {
-  return getFixedSize(window.innerWidth, window.innerHeight, ratio);
-}
-
-export function getDisplaySize(ratio, el) {
-  const width = el.offsetWidth;
-  const height = el.offsetHeight;
-  return getFixedSize(width, height, ratio);
-}
-
-function getFixedSize(width, height, ratio) {
-  const realAspectRatio = width / height;
-
-  const screenWidth = realAspectRatio < ratio ? width : height * ratio;
-  const screenHeight = realAspectRatio < ratio ? width / ratio : height;
-
-  return { screenWidth, screenHeight };
-}
-
 export const RATIOS = {
   sixteenNinths: 16 / 9,
   sixteenTenths: 16 / 10

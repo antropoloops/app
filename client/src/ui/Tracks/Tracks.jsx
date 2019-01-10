@@ -13,7 +13,7 @@ const Track = component("div")(props => ({
   marginBottom: "1em"
 }));
 
-const className = cxs({ padding: "1em" });
+const className = cxs({ padding: "1em", backgroundColor: "black" });
 
 const Tracks = ({
   audioset,

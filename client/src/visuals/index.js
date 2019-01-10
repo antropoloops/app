@@ -1,42 +1,76 @@
+import { throttle } from "lodash";
+import Visuals from "./visuals";
 import Display from "./display";
-import { START_VISUALS, STOP_VISUALS } from "../session/events";
-import { SET_AUDIO_CLIP_STATUS } from "../session/actions";
+import {
+  SET_AUDIOSET,
+  SET_AUDIO_CLIP_STATUS,
+  ATTACH_VISUALS,
+  DETACH_VISUALS
+} from "../session/actions";
 import Resources from "../audioset/resources";
-export default { connect };
 
-export function connect(session) {
-  const { events } = session;
-  let display;
+export default { init };
 
-  events.on(START_VISUALS, ({ audioset, el }) => {
-    display = createDisplay(audioset, el);
-    Resources.loadResources(audioset, "covers");
-  });
+export function init(el) {
+  if (!el) el = createElement();
+  const display = new Display(el);
+  display.setVisible(false);
+  let current;
+  const resize = throttle(() => {
+    if (current) current.render();
+  }, 1000);
+  window.addEventListener("resize", resize);
 
-  events.on(STOP_VISUALS, () => {
-    if (display && display.resize) {
-      window.removeEventListener("resize", display.resize);
+  return function effects(action) {
+    switch (action.type) {
+      case SET_AUDIOSET:
+        if (action.audioset) current = createVisuals(action.audioset, display);
+        else current = removeVisuals(current, display);
+        break;
+
+      // case ATTACH_VISUALS:
+      //   const { audioset } = action;
+      //   current = createVisuals(audioset, new Display(action.el));
+      //   Resources.loadResources(audioset, "covers");
+      //   window.addEventListener("resize", current.render);
+      //   break;
+
+      // case DETACH_VISUALS:
+      //   window.removeEventListener("resize", current.render);
+      //   current = null;
+      //   break;
+
+      case SET_AUDIO_CLIP_STATUS:
+        const { clipId, status } = action;
+        if (status.isPlaying) current.show(clipId);
+        else current.hide(clipId);
+        break;
+
+      default:
+        break;
     }
-  });
-
-  events.on("action", action => {
-    if (action.type === SET_AUDIO_CLIP_STATUS) {
-      if (action.status.isPlaying) display.show(action.clipId);
-      else display.hide(action.clipId);
-    }
-  });
+  };
 }
 
-export function init(set, events, el) {}
+function createElement() {
+  const el = document.createElement("div");
+  el.setAttribute("class", "visuals");
+  document.body.appendChild(el);
+  return el;
+}
 
-function createDisplay(audioset, el) {
-  const display = new Display(audioset, el);
-  display.resize = () => display.render();
-  window.addEventListener("resize", display.resize);
-  display.render();
+function removeVisuals(visuals, display) {
+  display.setVisible(false);
+  return null;
+}
+
+function createVisuals(audioset, display) {
+  display.setVisible(true);
+  const visuals = new Visuals(audioset, display);
+  visuals.render();
   fetch(audioset.visuals.geoMapUrl)
     .then(response => response.json())
-    .then(data => display.setGeodata(data));
+    .then(data => visuals.setGeodata(data));
 
-  return display;
+  return visuals;
 }

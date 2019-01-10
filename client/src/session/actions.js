@@ -44,3 +44,16 @@ export const changeTrackVolume = (trackId, volume) => ({
   trackId,
   volume
 });
+
+// Visuals
+// visuals require the element to be dispatched
+// the view can't talk directly to visuals, because
+// in some scenearios (mobile) visuals are not loaded
+export const ATTACH_VISUALS = "ATTACH_VISUALS";
+export const attachVisuals = (audioset, el) => ({
+  type: ATTACH_VISUALS,
+  audioset,
+  el
+});
+export const DETACH_VISUALS = "DETACH_VISUALS";
+export const detachVisuals = () => ({ type: DETACH_VISUALS });

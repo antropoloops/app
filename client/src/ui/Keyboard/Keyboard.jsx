@@ -12,7 +12,7 @@ const Key = cxs(Trigger)(props => ({
 const Keyboard = ({ audioset, status, className, onPress, onRelease }) => {
   const keyMap = getKeyboardMap(audioset);
   return (
-    <div className={className}>
+    <div className={className} id="Keyboard">
       {audioset.tracks.map(track =>
         track.clipIds.map(name => (
           <Key

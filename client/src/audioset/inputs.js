@@ -1,26 +1,33 @@
 import { memo } from "./cache";
 import { pressPad, releasePad } from "../session/actions";
 
-export function connect(session) {
+export function effects({ getSession, dispatch }) {
   const pressed = {};
+
   window.onkeydown = function(e) {
     const key = e.key;
     if (pressed[key]) return;
+
     pressed[key] = true;
-    const keyMap = getKeyboardMap(session.getAudioset());
+    const audioset = getSession().audioset;
+    if (!audioset) return;
+
+    const keyMap = getKeyboardMap(audioset);
     const clip = keyMap[key];
-    if (clip) session.dispatch(pressPad(clip.clipId));
+    if (clip) dispatch(pressPad(clip.clipId));
   };
 
   window.onkeyup = function(e) {
     const key = e.key;
     pressed[key] = false;
-    const keyMap = getKeyboardMap(session.getAudioset());
-    const clip = keyMap[key];
-    if (clip) session.dispatch(releasePad(clip.clipId));
-  };
 
-  //
+    const audioset = getSession().audioset;
+    if (!audioset) return;
+
+    const keyMap = getKeyboardMap(audioset);
+    const clip = keyMap[key];
+    if (clip) dispatch(releasePad(clip.clipId));
+  };
 }
 
 export function getKeyboardMap(audioset) {
@@ -40,4 +47,4 @@ function buildKeymap(keyboard) {
   }, {});
 }
 
-export default { connect };
+export default { effects };

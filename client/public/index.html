@@ -56,15 +56,24 @@
 
       body {
         font-family: "system";
-        font-size: 12px;
+        font-size: 1.1vw;
       }
-      .App {
-        background-color: black;
+      #app {
+        position: relative;
+        z-index: 1;
+      }
+      .visuals {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+        background-color: #2c2c2c;
       }
     </style>
   </head>
-  <div id="app"><div class="body">Antropoloops</div></div>
-  <div id="visuals"></div>
-
-  <body></body>
+  <body>
+    <div id="app"></div>
+  </body>
 </html>

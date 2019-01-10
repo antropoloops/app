@@ -7,14 +7,14 @@ import {
   DOT_RADIUS
 } from "./dimensions";
 
-export default function createAlbum(parent, screenWidth, params) {
+export default function drawAlbum(el, width, params) {
   const { trackNumber, imageUrl, year, country, trackColor } = params;
-  const album = parent.append("g");
-  const coverSize = getCoverSize(screenWidth);
-  const horizontalPadding = getHorizontalPadding(screenWidth);
-  const verticalPadding = getVerticalPadding(screenWidth);
-  const dotOffsetX = getDotOffsetX(screenWidth, trackNumber);
-  const infoHeight = getInfoHeight(screenWidth);
+  const album = el.append("g");
+  const coverSize = getCoverSize(width);
+  const horizontalPadding = getHorizontalPadding(width);
+  const verticalPadding = getVerticalPadding(width);
+  const dotOffsetX = getDotOffsetX(width, trackNumber);
+  const infoHeight = getInfoHeight(width);
   const fontSize = "1.1vw";
 
   album

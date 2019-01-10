@@ -12,28 +12,14 @@ export function loadState() {
   }
 }
 
-/**
- * Save the store state into local storage
- *
- * @param {*} store
- * @param {*} ms - time in milliseconds
- */
-export function autosave(store, ms = 1000) {
-  store.subscribe(
-    throttle(() => {
-      saveState(store.getState());
-    }, ms)
-  );
-}
-
-export function saveState(state) {
+export const saveState = throttle(state => {
   try {
     const serializedState = JSON.stringify(state);
     localStorage.setItem(STORAGE_KEY, serializedState);
   } catch (e) {
     console.log("Error saving state", e);
   }
-}
+}, 1000);
 
 if (typeof window !== undefined) {
   // to clear the storage manually

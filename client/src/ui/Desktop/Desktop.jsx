@@ -9,27 +9,31 @@ import Tracks from "../Tracks";
 import Keyboard from "../Keyboard";
 import Modal from "react-modal";
 import Fullscreen from "../../browser/fullscreen";
+import Help from "./Help";
 
 const initialState = audioset => ({
   isFullscreen: false,
   welcomeVisible: !audioset,
   padsVisible: false,
-  tracksVisible: true
+  tracksVisible: false,
+  help: false
 });
 
 // Actions
+const setHelpVisible = isVisible => ({ type: "help", isVisible });
 const setWelcomeVisible = isVisible => ({ type: "welcome", isVisible });
 const setPadsVisible = isVisible => ({ type: "pads", isVisible });
 const setTracksVisible = isVisible => ({ type: "tracks", isVisible });
 const setFullscreen = isFullscreen => ({ type: "fullscreen", isFullscreen });
 
 function reducer(state, action) {
-  console.log("joder", state, action);
   switch (action.type) {
     case "welcome":
       return { ...state, welcomeVisible: action.isVisible };
     case "fullscreen":
       return { ...state, isFullscreen: action.isFullscreen };
+    case "help":
+      return { ...state, help: action.isVisible };
     case "pads":
       return { ...state, padsVisible: action.isVisible };
     case "tracks":
@@ -39,7 +43,7 @@ function reducer(state, action) {
   }
 }
 
-const App = ({ audioset, events, dispatch }) => {
+const App = ({ audioset, attachVisuals, detachVisuals }) => {
   const [state, disp] = useReducer(reducer, initialState(audioset));
 
   // Handlers
@@ -48,11 +52,13 @@ const App = ({ audioset, events, dispatch }) => {
   const showFullscreen = () => Fullscreen.changeFullscreen(!state.isFullscreen);
   const hideWelcome = () => disp(setWelcomeVisible(false));
   const showWelcome = () => disp(setWelcomeVisible(true));
+  const onHelp = () => disp(setHelpVisible(true));
+  const onHelpStop = () => disp(setHelpVisible(false));
 
   useEffect(
     () =>
       Fullscreen.onChange(isFullscreen => disp(setFullscreen(isFullscreen))),
-    [dispatch]
+    []
   );
 
   const notFull = !state.isFullscreen;
@@ -61,9 +67,11 @@ const App = ({ audioset, events, dispatch }) => {
     <>
       {audioset && (
         <Main className="App">
+          <Help run={state.help} onStop={onHelpStop} />
           {notFull && (
             <Toolbar
               audioset={audioset}
+              onHelp={onHelp}
               audio={{}}
               onCloseAudioset={showWelcome}
               onTogglePads={togglePads}
@@ -74,7 +82,11 @@ const App = ({ audioset, events, dispatch }) => {
           <Content>
             {notFull && state.padsVisible && <Pads />}
             <Center>
-              <Visuals audioset={audioset} events={events} />
+              {/* <Visuals
+                audioset={audioset}
+                onStart={attachVisuals}
+                onStop={detachVisuals}
+              /> */}
             </Center>
             {notFull && state.tracksVisible && <Tracks />}
           </Content>
@@ -100,7 +112,8 @@ App.propTypes = {
 
 const ModalStyles = {
   overlay: {
-    backgroundColor: "rgba(0, 0, 0, 0.5)"
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    zIndex: 900
   },
   content: {
     // http://lynn.io/2014/02/22/modalin/
@@ -117,7 +130,8 @@ const ModalStyles = {
     // bottom: "40px",
     border: "",
     background: "black",
-    borderRadius: 0
+    borderRadius: 0,
+    zIndex: 1000
   }
 };
 
